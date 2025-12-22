@@ -77,6 +77,131 @@
                     </div>
                 </div>
 
+                <div id="role-permissions" class="subsection">
+                    <h3>Role Permissions</h3>
+                    <p>Use this matrix to see which roles can access each module. ✅ means the role has access; ❌ means it is not available for that role.</p>
+                    <div class="table-wrapper">
+                        <table class="feature-matrix">
+                            <thead>
+                                <tr>
+                                    <th>Module</th>
+                                    <th>Admin</th>
+                                    <th>Manager</th>
+                                    <th>Cashier</th>
+                                    <th>Stock Keeper</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Settings</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                </tr>
+                                <tr>
+                                    <td>User Management</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                </tr>
+                                <tr>
+                                    <td>Suppliers</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                </tr>
+                                <tr>
+                                    <td>Purchase Orders</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                </tr>
+                                <tr>
+                                    <td>GRN/Returns</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                </tr>
+                                <tr>
+                                    <td>Products</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>✅</td>
+                                </tr>
+                                <tr>
+                                    <td>Categories/Types</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>✅</td>
+                                </tr>
+                                <tr>
+                                    <td>Brands</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                </tr>
+                                <tr>
+                                    <td>Customers</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                </tr>
+                                <tr>
+                                    <td>Sales</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                </tr>
+                                <tr>
+                                    <td>Returns</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                </tr>
+                                <tr>
+                                    <td>Stock Reports</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>✅</td>
+                                </tr>
+                                <tr>
+                                    <td>Sales Reports</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                </tr>
+                                <tr>
+                                    <td>Financial Reports</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                </tr>
+                                <tr>
+                                    <td>Backup/Restore</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
                 <div id="dashboard" class="subsection">
                     <h3>Dashboard Overview</h3>
                     <p>After successful login, you'll be redirected to the main dashboard which provides an overview of your business operations.</p>
@@ -95,6 +220,8 @@
                         <li><strong>Quick Actions:</strong> Shortcuts to frequently used features</li>
                     </ul> -->
                 </div>
+
+                
 
             <section class="navigation-footer">
                 <h3>Navigation</h3>
@@ -157,6 +284,34 @@
         .nav-link:hover {
             background: #667eea;
             color: white;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        .feature-matrix {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95em;
+        }
+
+        .feature-matrix th,
+        .feature-matrix td {
+            border: 1px solid #e0e0e0;
+            padding: 10px 12px;
+            text-align: center;
+        }
+
+        .feature-matrix th {
+            background: #f7f7fb;
+            font-weight: 700;
+            color: #000;
+        }
+
+        .feature-matrix tbody tr:nth-child(odd) {
+            background: #fafafa;
         }
     </style>
 </body>
