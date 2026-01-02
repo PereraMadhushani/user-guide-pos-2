@@ -51,7 +51,7 @@
                             <li><a href="#purchase-orders">Purchase Orders</a></li>
                             <li><a href="#grn">Goods Received Notes</a></li>
                             <li><a href="#grn-returns">Goods Received Notes Return</a></li>
-                            <li><a href="#expenses">Expenses</a></li>
+                            <li><a href="#expenses">Supplier Payment</a></li>
                             <li><a href="#suppliers"> Suppliers</a></li>
                             <li><a href="#product-transfer-request"> Product Transfer Request</a></li>
                             <li><a href="#product-release-note"> Product Release Note  </a></li>
@@ -131,10 +131,45 @@
                     </div>
 
                     <div class="step">
-                        <h4>Step 2: Enter Credentials</h4>
+                        <h4>Step 2: Enter Login Credentials</h4>
+                        <p>Use one of the following default accounts to log in:</p>
+                        
+                        <div style="margin: 15px 0; padding: 15px; background: #f8f9fa; border-radius: 6px;">
+                            <p><strong>Admin User</strong></p>
+                            <ul style="list-style: none; padding-left: 0;">
+                                <li>Email: <code>admin@gmail.com</code></li>
+                                <li>Password: <code>123456789</code></li>
+                            </ul>
+                        </div>
+                        
+                        <div style="margin: 15px 0; padding: 15px; background: #f8f9fa; border-radius: 6px;">
+                            <p><strong>Manager User</strong></p>
+                            <ul style="list-style: none; padding-left: 0;">
+                                <li>Email: <code>manager@gmail.com</code></li>
+                                <li>Password: <code>123456789</code></li>
+                            </ul>
+                        </div>
+                        
+                        <div style="margin: 15px 0; padding: 15px; background: #f8f9fa; border-radius: 6px;">
+                            <p><strong>Cashier User</strong></p>
+                            <ul style="list-style: none; padding-left: 0;">
+                                <li>Email: <code>cashier@gmail.com</code></li>
+                                <li>Password: <code>123456789</code></li>
+                            </ul>
+                        </div>
+                        
+                        <div style="margin: 15px 0; padding: 15px; background: #f8f9fa; border-radius: 6px;">
+                            <p><strong>Store Keeper User</strong></p>
+                            <ul style="list-style: none; padding-left: 0;">
+                                <li>Email: <code>stockkeeper@gmail.com</code></li>
+                                <li>Password: <code>123456789</code></li>
+                            </ul>
+                        </div>
+                        
+                        <p><strong>Then:</strong></p>
                         <ul>
-                            <li>Enter your email address</li>
-                            <li>Enter your password</li>
+                            <li>Enter the email address</li>
+                            <li>Enter the password</li>
                             <li>Click the "Sign In" button</li>
                         </ul>
                     </div>
@@ -497,31 +532,31 @@
                 </div>
 
                 <div id="expenses" class="subsection">
-                    <h3>Expenses</h3>
-                    <p>Track and record business expenses related to inventory and operations. Expenses help you maintain accurate financial records and analyze operational costs.</p>
+                    <h3>Supplier Payment</h3>
+                    <p>Track and record supplier payments related to inventory and operations. Supplier payments help you maintain accurate financial records and manage payables to your suppliers.</p>
 
                     <div class="step">
-                        <h4>Creating an Expense</h4>
+                        <h4>Creating a Supplier Payment</h4>
                         <ol>
-                            <li>Navigate to <strong>Purchasing & Stock → Expenses</strong></li>
-                            <li>Click <strong>"Create New Expense"</strong> or <strong>"Add Expense"</strong></li>
-                            <li>Fill in the expense details:
+                            <li>Navigate to <strong>Purchasing & Stock → Supplier Payment</strong></li>
+                            <li>Click <strong>"Create New Supplier Payment"</strong> or <strong>"Add Payment"</strong></li>
+                            <li>Fill in the payment details:
                                 <ul>
-                                    <li><strong>Supplier:</strong> Date when the expense occurred (required)</li>
-                                    <li><strong>Total Amount:</strong> Select expense category (e.g., Transportation, Utilities, Maintenance, Packaging, etc.)</li>
-                                    <li><strong>Paid:</strong> Brief description of the expense (required)</li>
-                                    <li><strong>Balance:</strong> Total expense amount (required)</li>
-                                    <li><strong>Amount:</strong> Total expense amount (required)</li>
-                                    <li><strong>Date:</strong> Total expense amount (required)</li>
+                                    <li><strong>Supplier:</strong> Select the supplier to make payment to (required)</li>
+                                    <li><strong>Total Amount:</strong> Total outstanding amount due to supplier</li>
+                                    <li><strong>Paid:</strong> Amount being paid in this transaction (required)</li>
+                                    <li><strong>Balance:</strong> Remaining balance after this payment</li>
+                                    <li><strong>Amount:</strong> Payment amount (required)</li>
+                                    <li><strong>Date:</strong> Date of payment (required)</li>
                                     <li><strong>Payment Method:</strong> Select how payment was made (Cash, Check, Bank Transfer, etc.)</li>
                                 </ul>
                             </li>
                             <li>Review all information for accuracy</li>
-                            <li>Click <strong>"Create Expense"</strong> to record the expense</li>
+                            <li>Click <strong>"Create Supplier Payment"</strong> to record the payment</li>
                         </ol>
 
                         <div class="screenshot-placeholder">
-                            <img src="screenshots/expenses-create.png" alt="Create Expense" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: expenses-create.png<br><small>Place your create expense screenshot here</small></div>'">
+                            <img src="screenshots/supplier-payment-create.png" alt="Create Supplier Payment" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: supplier-payment-create.png<br><small>Place your create supplier payment screenshot here</small></div>'">>
                         </div>
                     </div>
                 </div>
@@ -531,10 +566,10 @@
                     <p></p>
 
                     <div class="step">
-                        <h4>Creating an Expense</h4>
+                        <h4>Managing Suppliers</h4>
                         <ol>
-                            <li>Navigate to <strong>Purchasing & Stock → Expenses</strong></li>
-                            <li>Click <strong>"Create New Expense"</strong> or <strong>"Add Expense"</strong></li>
+                            <li>Navigate to <strong>Purchasing & Stock → Suppliers</strong></li>
+                            <li>Click <strong>"Create New Supplier"</strong> or <strong>"Add Supplier"</strong></li>
                             <li>Fill in the expense details:
                                 <ul>
                                     <li><strong>Supplier:</strong> Date when the expense occurred (required)</li>
@@ -561,10 +596,10 @@
                     <p></p>
 
                     <div class="step">
-                        <h4>Creating an Expense</h4>
+                        <h4>Creating a Product Transfer Request</h4>
                         <ol>
-                            <li>Navigate to <strong>Purchasing & Stock → Expenses</strong></li>
-                            <li>Click <strong>"Create New Expense"</strong> or <strong>"Add Expense"</strong></li>
+                            <li>Navigate to <strong>Purchasing & Stock → Product Transfer Request</strong></li>
+                            <li>Click <strong>"Create New Transfer Request"</strong> or <strong>"Add Request"</strong></li>
                             <li>Fill in the expense details:
                                 <ul>
                                     <li><strong>Supplier:</strong> Date when the expense occurred (required)</li>
@@ -591,10 +626,10 @@
                     <p></p>
 
                     <div class="step">
-                        <h4>Creating an Expense</h4>
+                        <h4>Creating a Product Release Note</h4>
                         <ol>
-                            <li>Navigate to <strong>Purchasing & Stock → Expenses</strong></li>
-                            <li>Click <strong>"Create New Expense"</strong> or <strong>"Add Expense"</strong></li>
+                            <li>Navigate to <strong>Purchasing & Stock → Product Release Note</strong></li>
+                            <li>Click <strong>"Create New Release Note"</strong> or <strong>"Add Note"</strong></li>
                             <li>Fill in the expense details:
                                 <ul>
                                     <li><strong>Supplier:</strong> Date when the expense occurred (required)</li>
@@ -621,10 +656,10 @@
                     <p></p>
 
                     <div class="step">
-                        <h4>Creating an Expense</h4>
+                        <h4>Creating a Stock Return</h4>
                         <ol>
-                            <li>Navigate to <strong>Purchasing & Stock → Expenses</strong></li>
-                            <li>Click <strong>"Create New Expense"</strong> or <strong>"Add Expense"</strong></li>
+                            <li>Navigate to <strong>Purchasing & Stock → Stock Returns</strong></li>
+                            <li>Click <strong>"Create New Stock Return"</strong> or <strong>"Add Return"</strong></li>
                             <li>Fill in the expense details:
                                 <ul>
                                     <li><strong>Supplier:</strong> Date when the expense occurred (required)</li>
