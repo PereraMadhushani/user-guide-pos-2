@@ -58,13 +58,18 @@
                             <li><a href="#stock-returns"> Stock Returns</a></li>
                         </ul>
                     </li>
-                    <li><a href="#sales">Sales Management</a>
+                    <li><a href="#shops">Shops</a>
                         <ul>
-                            <li><a href="#customer">Customer</a></li>
-                            <li><a href="#discount">Discount</a></li>
+                            <li><a href="#customers">Customers</a></li>
+                            <li><a href="#discounts">Discounts</a></li>
                             <li><a href="#taxes">Taxes</a></li>
                             <li><a href="#sales">Sales</a></li>
-                            <li><a href="#product-returns">Product Returns</a></li>
+                            <li><a href="#sales-history">Sales History</a></li>
+                            <li><a href="#quotations">Quotations</a></li>
+                            <li><a href="#edit-quotations">Edit Quotations</a></li>
+                            <li><a href="#goods-transfer-request">Goods Transfer Request</a></li>
+                            <li><a href="#goods-transfer-returns">Goods Transfer Returns</a></li>
+                            <li><a href="#sales-return">Sales Return</a></li>
                         </ul>
                     </li>
 
@@ -211,7 +216,7 @@
                     <div class="step">
                         <h4>Adding a New Product</h4>
                         <ol>
-                            <li>Navigate to <strong>Inventory → Products</strong></li>
+                            <li>Navigate to <strong>Products → Inventory Management →  Products</strong></li>
                             <li>Click the <strong>"Add Product"</strong> button</li>
                             <li>Fill in the product details:
                                 <ul>
@@ -275,7 +280,7 @@
                     <div class="step">
                         <h4>Managing Categories</h4>
                         <ol>
-                            <li>Go to <strong>Inventory → Categories</strong></li>
+                            <li>Go to <strong>Products → Inventory Management → Categories</strong></li>
                             <li>Click <strong>"Add Category"</strong></li>
                             <li>Enter category name and select parent category.</li>
                             <li>Create category</li>
@@ -326,13 +331,13 @@
                     <div class="step">
                         <h4>Creating a Purchase Order Request</h4>
                         <ol>
-                            <li>Navigate to <strong>Purchasing & Stock → Purchase Orders</strong></li>
+                            <li>Navigate to <strong>Stores → Purchase Orders</strong></li>
                             <li>Click the <strong>"Create Purchase Order Request"</strong> button</li>
                             <li>Fill in the <strong>Order Information</strong>:
                                 <ul>
                                     <li><strong>Order Number:</strong> Auto-generated unique identifier (read-only)</li>
                                     <li><strong>Order Date:</strong> Select the date for this request (required)</li>
-                                    <li><strong>User:</strong> Select the user responsible for this order (required)</li>
+                                    <li><strong>User:</strong> Logged-in user</li>
                                 </ul>
                             </li>
                             <li>Add products to the order:
@@ -358,7 +363,7 @@
                         <h4>Viewing Purchase Order Requests</h4>
                         <p>The Purchase Order Requests list displays all created purchase orders with their current status and details.</p>
                         <ol>
-                            <li>Navigate to <strong>Purchasing & Stock → Purchase Orders</strong></li>
+                            <li>Navigate to <strong>Purchase → Purchase Orders</strong></li>
                             <li>The list displays the following information for each POR:
                                 <ul>
                                     <li><strong>Order Number:</strong> Unique identifier for each request</li>
@@ -408,7 +413,7 @@
                         <h4>Creating a GRN</h4>
                         <p>A Goods Received Note records products received from suppliers and automatically updates inventory stock levels in the system.</p>
                         <ol>
-                            <li>Navigate to <strong>Purchasing & Stock → Goods Received Notes</strong></li>
+                            <li>Navigate to <strong>Stores Goods Received Notes</strong></li>
                             <li>Click <strong>"Create New GRN"</strong> or <strong>"Add New Goods Received Note"</strong></li>
                             <li>Fill in the GRN header information:
                                 <ul>
@@ -451,7 +456,7 @@
                         <h4>Viewing Goods Received Notes (GRN List)</h4>
                         <p>The Goods Received Notes list displays all created GRNs with their details, status, and transaction history.</p>
                         <ol>
-                            <li>Navigate to <strong>Purchasing & Stock → Goods Received Notes</strong></li>
+                            <li>Navigate to <strong>Stores → Goods Received Notes</strong></li>
                             <li>The list displays the following information for each GRN:
                                 <ul>
                                     <li><strong>GRN Number:</strong> Unique identifier for each goods receipt</li>
@@ -489,7 +494,7 @@
                     <div class="step">
                         <h4>Creating a GRN Return</h4>
                         <ol>
-                            <li>Navigate to <strong>Purchasing & Stock → GRN Returns</strong></li>
+                            <li>Navigate to <strong>Stores → GRN Returns</strong></li>
                             <li>Click <strong>"Create New GRN Return"</strong> or <strong>"Add New Return"</strong></li>
                             <li>Fill in the return header information:
                                 <ul>
@@ -538,7 +543,7 @@
                     <div class="step">
                         <h4>Creating a Supplier Payment</h4>
                         <ol>
-                            <li>Navigate to <strong>Purchasing & Stock → Supplier Payment</strong></li>
+                            <li>Navigate to <strong>Stores → Supplier Payment</strong></li>
                             <li>Click <strong>"Create New Supplier Payment"</strong> or <strong>"Add Payment"</strong></li>
                             <li>Fill in the payment details:
                                 <ul>
@@ -568,7 +573,7 @@
                     <div class="step">
                         <h4>Managing Suppliers</h4>
                         <ol>
-                            <li>Navigate to <strong>Purchasing & Stock → Suppliers</strong></li>
+                            <li>Navigate to <strong>Stores → Suppliers</strong></li>
                             <li>Click <strong>"Create New Supplier"</strong> or <strong>"Add Supplier"</strong></li>
                             <li>Fill in the expense details:
                                 <ul>
@@ -683,81 +688,1150 @@
             </section>
 
 
-            <!-- Sales Management Section -->
-            <section id="sales" class="section">
-                <h2>Sales Management</h2>
-                <p>Manage all sales-related activities including invoices and customer management.</p>
-                <div id="customer" class="subsection">
+            <!-- Shops Section -->
+            <section id="shops" class="section">
+                <h2>Shops</h2>
+                <p>Manage all shop-related activities including customers, sales, quotations, and goods transfers.</p>
+                <div id="customers" class="subsection">
                     <h3>Customers</h3>
-                    <p>View, edit, and manage all sales invoices from this section.</p>
-                    
-                    <div class="screenshot-placeholder">
-                        <img src="screenshots/sales-invoices.png" alt="Sales Invoices" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: sales-invoices.png<br><small>Place your sales invoices screenshot here</small></div>'">
-                    </div>
-                </div>
-
-                <div id="discount" class="subsection">
-                    <h3>Discount</h3>
-                    <p>Maintain a database of your customers for better customer relationship management.</p>
+                    <p>Maintain a comprehensive database of your customers for better customer relationship management and sales tracking. The customer list displays all customers with their contact information, credit limits, and current status.</p>
                     
                     <div class="step">
-                        <h4>Adding a Customer</h4>
+                        <h4>Viewing Customer List</h4>
+                        <p>The customer list displays all registered customers with the following information:</p>
+                        <ul>
+                            <li><strong>ID:</strong> Unique customer identifier</li>
+                            <li><strong>Customer Name:</strong> Full name of the customer</li>
+                            <li><strong>Email:</strong> Customer's email address</li>
+                            <li><strong>Phone Number:</strong> Contact number</li>
+                            <li><strong>Credit Limit:</strong> Maximum credit amount allowed</li>
+                            <li><strong>Status:</strong> Active or Default status indicator</li>
+                            <li><strong>Actions:</strong> Edit button to modify customer details</li>
+                        </ul>
+
+                        <div class="screenshot-placeholder">
+                            <img src="screenshots/customers-list.png" alt="Customer List" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: customers-list.png<br><small>Place your customer list screenshot here</small></div>'">
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h4>Adding a New Customer</h4>
                         <ol>
-                            <li>Go to <strong>Sales → Customers</strong></li>
-                            <li>Click <strong>"Add Customer"</strong></li>
-                            <li>Enter customer details (name, phone, email, address)</li>
-                            <li>Save the customer</li>
+                            <li>Navigate to <strong>Shops → Customers</strong></li>
+                            <li>Click the <strong>"Add Customer"</strong> button in the top right corner</li>
+                            <li>The "Add New Customer" modal will appear</li>
+                            <li>Fill in the customer details:
+                                <ul>
+                                    <li><strong>Customer Name *</strong> (required) - Enter the full name of the customer</li>
+                                    <li><strong>Email</strong> - Enter customer's email address</li>
+                                    <li><strong>Phone Number</strong> - Enter customer's contact number</li>
+                                    <li><strong>Credit Limit</strong> - Set the maximum credit amount (default: 0)</li>
+                                    <li><strong>Address</strong> - Enter customer's full address</li>
+                                    <li><strong>Status *</strong> (required) - Select either:
+                                        <ul>
+                                            <li><strong>Active</strong> - Customer can make purchases</li>
+                                            <li><strong>Inactive</strong> - Customer account is disabled</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Click <strong>"Create Customer"</strong> to save the new customer</li>
+                            <li>Click <strong>"Cancel"</strong> to discard changes</li>
                         </ol>
 
                         <div class="screenshot-placeholder">
-                            <img src="screenshots/customers.png" alt="Customer Management" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: customers.png<br><small>Place your customers screenshot here</small></div>'">
+                            <img src="screenshots/add-customer.png" alt="Add New Customer" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: add-customer.png<br><small>Place your add customer modal screenshot here</small></div>'">
                         </div>
+                    </div>
+
+                    <div class="step">
+                        <h4>Editing a Customer</h4>
+                        <ol>
+                            <li>Locate the customer in the customer list</li>
+                            <li>Click the <strong>"Edit"</strong> button in the Actions column</li>
+                            <li>Update the customer information as needed</li>
+                            <li>Click <strong>"Update Customer"</strong> to save changes</li>
+                        </ol>
+                    </div>
+
+                    <div class="note">
+                        <strong>Note:</strong> Fields marked with an asterisk (*) are required. The Default Customer (ID: 1) is a system account used for walk-in sales and cannot be deleted.
+                    </div>
+
+                    <div class="tip">
+                        <strong>💡 Tip:</strong> Use the credit limit feature to control how much customers can purchase on credit. Set it to 0.00 for cash-only customers.
+                    </div>
+                </div>
+
+                <div id="discounts" class="subsection">
+                    <h3>Discounts</h3>
+                    <p>Create and manage discount schemes to offer promotional pricing to your customers. You can set up percentage-based or fixed amount discounts with specific validity periods.</p>
+                    
+                    <div class="step">
+                        <h4>Viewing Discount List</h4>
+                        <p>The discount list displays all configured discounts with the following information:</p>
+                        <ul>
+                            <li><strong>ID:</strong> Unique discount identifier</li>
+                            <li><strong>Name:</strong> Discount name (e.g., "No Discount", "Referral Discount", "Flash Sale")</li>
+                            <li><strong>Type:</strong> Either <span style="color: #a855f7;">Percentage</span> or <span style="color: #f97316;">Fixed</span> amount</li>
+                            <li><strong>Value:</strong> Discount value (percentage or currency amount in LKR)</li>
+                            <li><strong>Start Date:</strong> Discount validity start date</li>
+                            <li><strong>End Date:</strong> Discount expiry date</li>
+                            <li><strong>Status:</strong> Default or Active status indicator</li>
+                            <li><strong>Actions:</strong> Edit button to modify discount details</li>
+                        </ul>
+
+                        <div class="screenshot-placeholder">
+                            <img src="screenshots/discounts-list.png" alt="Discount List" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: discounts-list.png<br><small>Place your discount list screenshot here</small></div>'">
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h4>Adding a New Discount</h4>
+                        <ol>
+                            <li>Navigate to <strong>Shops → Discounts</strong></li>
+                            <li>Click the <strong>"Add Discount"</strong> button in the top right corner</li>
+                            <li>The "Add New Discount" modal will appear</li>
+                            <li>Fill in the discount details:
+                                <ul>
+                                    <li><strong>Discount Name *</strong> (required) - Enter a descriptive name for the discount</li>
+                                    <li><strong>Type *</strong> (required) - Select discount type from dropdown:
+                                        <ul>
+                                            <li><strong>Percentage (%)</strong> - Discount as percentage of price</li>
+                                            <li><strong>Fixed</strong> - Fixed amount discount in LKR</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Value *</strong> (required) - Enter the discount value (percentage or amount)</li>
+                                    <li><strong>Start Date</strong> - Select the date when discount becomes active (format: DD/MM/YYYY)</li>
+                                    <li><strong>End Date</strong> - Select the date when discount expires (format: DD/MM/YYYY)</li>
+                                    <li><strong>Status *</strong> (required) - Select discount status:
+                                        <ul>
+                                            <li><strong>Active</strong> - Discount can be applied to sales</li>
+                                            <li><strong>Inactive</strong> - Discount is disabled</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Click <strong>"Create Discount"</strong> to save the new discount</li>
+                            <li>Click <strong>"Cancel"</strong> to discard changes</li>
+                        </ol>
+
+                        <div class="screenshot-placeholder">
+                            <img src="screenshots/add-discount.png" alt="Add New Discount" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: add-discount.png<br><small>Place your add discount modal screenshot here</small></div>'">
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h4>Editing a Discount</h4>
+                        <ol>
+                            <li>Locate the discount in the discount list</li>
+                            <li>Click the <strong>"Edit"</strong> button in the Actions column</li>
+                            <li>Update the discount information as needed</li>
+                            <li>Click <strong>"Update Discount"</strong> to save changes</li>
+                        </ol>
+                    </div>
+
+                    <div class="note">
+                        <strong>Note:</strong> Fields marked with an asterisk (*) are required. The "No Discount" (ID: 1) is a default system discount with 0% value and cannot be deleted.
+                    </div>
+
+                    <div class="tip">
+                        <strong>💡 Tip:</strong> For seasonal promotions, set specific start and end dates. Leave dates empty for discounts that should be available indefinitely. Percentage discounts are best for general promotions, while fixed amount discounts work well for specific price reductions.
                     </div>
                 </div>
 
                 <div id="taxes" class="subsection">
                     <h3>Taxes</h3>
-                    <p>View, edit, and manage all sales invoices from this section.</p>
+                    <p>Configure and manage tax rates applicable to your sales transactions. Set up different tax types and rates that will be automatically applied during sales processing.</p>
                     
-                    <div class="screenshot-placeholder">
-                        <img src="screenshots/sales-invoices.png" alt="Sales Invoices" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: sales-invoices.png<br><small>Place your sales invoices screenshot here</small></div>'">
+                    <div class="step">
+                        <h4>Viewing Tax List</h4>
+                        <p>The tax list displays all configured tax rates with the following information:</p>
+                        <ul>
+                            <li><strong>ID:</strong> Unique tax identifier</li>
+                            <li><strong>Tax Name:</strong> Name of the tax (e.g., "No Tax", "Local Sales Tax", "VAT", "GST")</li>
+                            <li><strong>Percentage:</strong> Tax rate as a percentage (e.g., 0.00%, 7.00%, 18.00%)</li>
+                            <li><strong>Type:</strong> Tax calculation method - <span style="color: #a855f7;">Inclusive</span> (price includes tax) or <span style="color: #f97316;">Exclusive</span> (tax added to price)</li>
+                            <li><strong>Status:</strong> Default (system default) or Active status indicator</li>
+                            <li><strong>Actions:</strong> Edit button to modify tax details</li>
+                        </ul>
+
+                        <div class="screenshot-placeholder">
+                            <img src="screenshots/taxes-list.png" alt="Tax List" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: taxes-list.png<br><small>Place your tax list screenshot here</small></div>'">
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h4>Adding a New Tax</h4>
+                        <ol>
+                            <li>Navigate to <strong>Shops → Taxes</strong></li>
+                            <li>Click the <strong>"Add Tax"</strong> button in the top right corner</li>
+                            <li>The "Add New Tax" modal will appear</li>
+                            <li>Fill in the tax details:
+                                <ul>
+                                    <li><strong>Tax Name *</strong> (required) - Enter a descriptive name for the tax (e.g., "Local Sales Tax", "VAT", "GST", "Import Duty", "Luxury Tax", "Service Tax")</li>
+                                    <li><strong>Percentage *</strong> (required) - Enter the tax rate as a percentage (e.g., 7.00 for 7%, 18.00 for 18%). Default value is 0.</li>
+                                    <li><strong>Type *</strong> (required) - Select tax calculation method from dropdown:
+                                        <ul>
+                                            <li><strong>Inclusive</strong> - Tax is included in the displayed product price (price breakdown shows tax portion)</li>
+                                            <li><strong>Exclusive</strong> - Tax is added on top of the product price (shown as separate line item)</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Status *</strong> (required) - Select tax status from dropdown:
+                                        <ul>
+                                            <li><strong>Active</strong> - Tax can be applied to transactions</li>
+                                            <li><strong>Inactive</strong> - Tax is disabled and cannot be selected</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Click <strong>"Create Tax"</strong> to save the new tax</li>
+                            <li>Click <strong>"Cancel"</strong> to discard changes</li>
+                        </ol>
+
+                        <div class="screenshot-placeholder">
+                            <img src="screenshots/add-tax.png" alt="Add New Tax" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: add-tax.png<br><small>Place your add tax modal screenshot here</small></div>'">
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h4>Understanding Tax Types</h4>
+                        <p><strong>Inclusive vs Exclusive Taxation:</strong></p>
+                        <ul>
+                            <li><strong>Inclusive Tax:</strong> Product price already contains the tax. Example: If an item costs LKR 100 with 10% inclusive tax, the base price is LKR 90.91 and tax is LKR 9.09.</li>
+                            <li><strong>Exclusive Tax:</strong> Tax is added to the product price. Example: If an item costs LKR 100 with 10% exclusive tax, the final price becomes LKR 110 (LKR 100 + LKR 10 tax).</li>
+                        </ul>
+                    </div>
+
+                    <div class="step">
+                        <h4>Editing a Tax</h4>
+                        <ol>
+                            <li>Locate the tax in the tax list</li>
+                            <li>Click the <strong>"Edit"</strong> button in the Actions column</li>
+                            <li>Update the tax information as needed</li>
+                            <li>Click <strong>"Update Tax"</strong> to save changes</li>
+                        </ol>
+                    </div>
+
+                    <div class="note">
+                        <strong>Note:</strong> Fields marked with an asterisk (*) are required. The "No Tax" (ID: 1) is a default system tax with 0.00% rate and cannot be deleted. It's used for tax-exempt transactions.
+                    </div>
+
+                    <div class="tip">
+                        <strong>💡 Tip:</strong> Choose "Inclusive" tax for retail scenarios where customers see final prices. Use "Exclusive" tax for B2B transactions where tax is typically added separately. Make sure your tax configuration matches your local tax regulations.
                     </div>
                 </div>
 
                 <div id="sales" class="subsection">
                     <h3>Sales</h3>
-                    <p>Maintain a database of your customers for better customer relationship management.</p>
+                    <p>Process point-of-sale transactions quickly and efficiently using the New Sale / Bill interface. The POS system supports barcode scanning, manual product selection, and multiple payment methods.</p>
                     
                     <div class="step">
-                        <h4>Adding a Customer</h4>
-                        <ol>
-                            <li>Go to <strong>Sales → Customers</strong></li>
-                            <li>Click <strong>"Add Customer"</strong></li>
-                            <li>Enter customer details (name, phone, email, address)</li>
-                            <li>Save the customer</li>
-                        </ol>
+                        <h4>Understanding the Sales Interface</h4>
+                        <p>The New Sale / Bill screen consists of several key sections:</p>
+                        <ul>
+                            <li><strong>Invoice Number:</strong> Auto-generated unique invoice ID (e.g., INV-000001) displayed in top right</li>
+                            <li><strong>Scan Barcode:</strong> Quick product addition via barcode scanner</li>
+                            <li><strong>Customer & Date:</strong> Select customer and set transaction date</li>
+                            <li><strong>Price Type:</strong> Choose between Retail or Wholesale pricing</li>
+                            <li><strong>Add Products:</strong> Browse and select products from inventory</li>
+                            <li><strong>Cart Items:</strong> View and manage products in current transaction</li>
+                            <li><strong>Bill Summary:</strong> Real-time calculation of totals, discounts, and change</li>
+                        </ul>
 
                         <div class="screenshot-placeholder">
-                            <img src="screenshots/customers.png" alt="Customer Management" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: customers.png<br><small>Place your customers screenshot here</small></div>'">
+                            <img src="screenshots/new-sale-interface.png" alt="New Sale Interface" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: new-sale-interface.png<br><small>Place your new sale interface screenshot here</small></div>'">
                         </div>
                     </div>
-                </div>
-                 <div id="product-returns" class="subsection">
-                    <h3>Sales</h3>
-                    <p>Maintain a database of your customers for better customer relationship management.</p>
-                    
+
                     <div class="step">
-                        <h4>Adding a Customer</h4>
+                        <h4>Creating a New Sale</h4>
                         <ol>
-                            <li>Go to <strong>Sales → Customers</strong></li>
-                            <li>Click <strong>"Add Customer"</strong></li>
-                            <li>Enter customer details (name, phone, email, address)</li>
-                            <li>Save the customer</li>
+                            <li>Navigate to <strong>Shops → Sales</strong> or click the Dashboard "Sales" tile</li>
+                            <li>The "New Sale / Bill" screen opens automatically</li>
+                            <li><strong>Select Customer & Date:</strong>
+                                <ul>
+                                    <li>Click the <strong>Customer dropdown</strong> to select a customer (default shows customer name like "William Taylor")</li>
+                                    <li>Select the transaction date (defaults to current date)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Choose Price Type:</strong>
+                                <ul>
+                                    <li>Select <strong>Retail</strong> for standard customer pricing</li>
+                                    <li>Select <strong>Wholesale</strong> for bulk/wholesale pricing</li>
+                                </ul>
+                            </li>
+                            <li><strong>Add Products to Cart:</strong> Use one of three methods:
+                                <ul>
+                                    <li><strong>Scan Barcode:</strong> Type or scan product barcode in the "Scan barcode..." field and click <strong>"Add"</strong></li>
+                                    <li><strong>Browse Products:</strong> Click the purple <strong>"Browse Products"</strong> button to see product catalog</li>
+                                    <li><strong>Focus Barcode (ESC):</strong> Press ESC key to quickly focus barcode input field</li>
+                                </ul>
+                            </li>
+                            <li><strong>Manage Cart Items:</strong>
+                                <ul>
+                                    <li>Added products appear in the "Cart Items" table showing Product, Price, Qty, Total, and Action columns</li>
+                                    <li>Adjust quantities as needed</li>
+                                    <li>Remove items using the Action column buttons</li>
+                                </ul>
+                            </li>
+                            <li><strong>Review Bill Summary:</strong>
+                                <ul>
+                                    <li><strong>Sub Total:</strong> Total before discounts and taxes</li>
+                                    <li><strong>Custom Discount (LKR):</strong> Enter manual discount amount if needed</li>
+                                    <li><strong>Net Amount:</strong> Final amount due</li>
+                                    <li><strong>Change:</strong> Change amount to return (calculated after payment)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Add Payment:</strong>
+                                <ul>
+                                    <li>Click the <strong>"💳 Add Payment"</strong> button</li>
+                                    <li>Select payment method (Cash, Card, etc.)</li>
+                                    <li>Enter amount received</li>
+                                    <li>System calculates change automatically</li>
+                                </ul>
+                            </li>
+                            <li><strong>Complete Sale:</strong>
+                                <ul>
+                                    <li>Click <strong>"✅ Complete Sale (F9)"</strong> button or press F9 key</li>
+                                    <li>Invoice is generated and saved</li>
+                                    <li>Receipt can be printed</li>
+                                    <li>Cart clears for next transaction</li>
+                                </ul>
+                            </li>
                         </ol>
 
                         <div class="screenshot-placeholder">
-                            <img src="screenshots/customers.png" alt="Customer Management" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: customers.png<br><small>Place your customers screenshot here</small></div>'">
+                            <img src="screenshots/pos-sales.png" alt="POS Sales Process" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: pos-sales.png<br><small>Place your POS sales screenshot here</small></div>'">
                         </div>
+                    </div>
+
+                    <div class="step">
+                        <h4>Keyboard Shortcuts</h4>
+                        <p>Speed up your sales process with these keyboard shortcuts:</p>
+                        <ul>
+                            <li><strong>F9:</strong> Complete Sale - Finalize the transaction</li>
+                            <li><strong>F8:</strong> Clear Cart - Remove all items from cart</li>
+                            <li><strong>ESC:</strong> Focus Barcode - Jump to barcode input field</li>
+                            <li><strong>F3:</strong> Complete Sale (alternative)</li>
+                        </ul>
+                        <p class="note">Shortcuts are displayed at the bottom of the sales screen for quick reference.</p>
+                    </div>
+
+                    <div class="note">
+                        <strong>Note:</strong> Empty cart message displays "No items in cart - Scan barcode or select product to add" when cart is empty. The invoice number is automatically generated for each new transaction and cannot be edited manually.
+                    </div>
+
+                    <div class="tip">
+                        <strong>💡 Tips for Efficient Sales:</strong>
+                        <ul>
+                            <li>Use barcode scanning for fastest product entry</li>
+                            <li>Set up default customer for walk-in sales to skip customer selection</li>
+                            <li>Press F9 to quickly complete sales without using mouse</li>
+                            <li>Apply custom discounts before adding payment for accurate change calculation</li>
+                            <li>Switch between Retail and Wholesale pricing based on customer type</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="sales-history" class="subsection">
+                    <h3>Sales History</h3>
+                    <p>View and manage all completed sales transactions. The Sales History provides a comprehensive record of all sales with detailed information including customer details, products sold, discounts applied, and returns processed.</p>
+                    
+                    <div class="step">
+                        <h4>Understanding Sales History Interface</h4>
+                        <p>The Sales History screen displays a comprehensive table with the following columns:</p>
+                        <ul>
+                            <li><strong>#:</strong> Sequential row number</li>
+                            <li><strong>Invoice No:</strong> Unique invoice identifier (e.g., INV-000001)</li>
+                            <li><strong>Customer:</strong> Customer name associated with the sale</li>
+                            <li><strong>Products:</strong> List or count of products sold</li>
+                            <li><strong>Type:</strong> Sale type (Retail, Wholesale, etc.)</li>
+                            <li><strong>Total:</strong> Original sale total amount</li>
+                            <li><strong>Discount:</strong> Total discount applied to the sale</li>
+                            <li><strong>Net Amount:</strong> Amount after discount</li>
+                            <li><strong>Returns:</strong> Value of returned items</li>
+                            <li><strong>Net After Return:</strong> Final amount after processing returns</li>
+                            <li><strong>Balance:</strong> Outstanding balance (for credit sales)</li>
+                            <li><strong>Sale Date:</strong> Date and time of transaction</li>
+                            <li><strong>Actions:</strong> Available operations (View, Print, Edit, Delete)</li>
+                        </ul>
+
+                        <div class="screenshot-placeholder">
+                            <img src="screenshots/sales-history-list.png" alt="Sales History List" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: sales-history-list.png<br><small>Place your sales history list screenshot here</small></div>'">
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h4>Accessing Sales History</h4>
+                        <ol>
+                            <li>Navigate to <strong>Shops → Sales History</strong></li>
+                            <li>The sales history table displays all completed transactions</li>
+                            <li>Record count shown in top right corner (e.g., "Total: 0 records")</li>
+                            <li>Use <strong>"Back"</strong> button to return to previous screen</li>
+                        </ol>
+                    </div>
+
+                    <div class="step">
+                        <h4>Viewing Sales Details</h4>
+                        <ol>
+                            <li>Locate the desired sale in the list</li>
+                            <li>Click on the row or the <strong>"View"</strong> action button</li>
+                            <li>View detailed information including:
+                                <ul>
+                                    <li>Complete product list with quantities and prices</li>
+                                    <li>Customer information</li>
+                                    <li>Payment details and method</li>
+                                    <li>Applied discounts and taxes</li>
+                                    <li>Return history (if applicable)</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="step">
+                        <h4>Available Actions</h4>
+                        <p>For each sale record, you can perform the following actions:</p>
+                        <ul>
+                            <li><strong>View Details:</strong> See complete sale information</li>
+                            <li><strong>Print Receipt:</strong> Generate and print customer receipt</li>
+                            <li><strong>Email Receipt:</strong> Send receipt to customer email</li>
+                            <li><strong>Edit:</strong> Modify sale details (if permitted by permissions)</li>
+                            <li><strong>Process Return:</strong> Initiate return for items in this sale</li>
+                            <li><strong>Void/Cancel:</strong> Cancel the sale (if permitted and no returns processed)</li>
+                        </ul>
+                    </div>
+
+                    <div class="step">
+                        <h4>Filtering and Searching</h4>
+                        <p>Use the available filters to find specific sales:</p>
+                        <ul>
+                            <li>Search by invoice number</li>
+                            <li>Filter by customer name</li>
+                            <li>Filter by date range</li>
+                            <li>Filter by sale type (Retail/Wholesale)</li>
+                            <li>Filter by payment status (Paid/Pending/Credit)</li>
+                        </ul>
+                    </div>
+
+                    <div class="step">
+                        <h4>Pagination</h4>
+                        <p>Navigate through multiple pages of sales records:</p>
+                        <ul>
+                            <li>Results display shows current range (e.g., "Showing 0 to 0 of 0 results")</li>
+                            <li>Use <strong>"Previous"</strong> and <strong>"Next"</strong> buttons to navigate pages</li>
+                            <li>Click page numbers for direct navigation</li>
+                            <li>Default display shows 10 records per page</li>
+                        </ul>
+                    </div>
+
+                    <div class="note">
+                        <strong>Note:</strong> When no sales are found, the table displays "No sales found" message. Sales with returns processed will show the return amount in the Returns column and adjusted final amount in the Net After Return column.
+                    </div>
+
+                    <div class="tip">
+                        <strong>💡 Tip:</strong> Use date range filters to view sales for specific periods (daily, weekly, monthly reports). The Balance column helps identify customers with outstanding credit amounts that need collection.
+                    </div>
+                </div>
+
+                <div id="quotations" class="subsection">
+                    <h3>Quotations</h3>
+                    <p>Create and manage sales quotations for potential customers. The quotation system allows you to prepare price estimates with product details that can later be converted into actual sales.</p>
+                    
+                    <div class="step">
+                        <h4>Understanding the Quotation Interface</h4>
+                        <p>The New Quotation / Bill screen is similar to the Sales interface with key sections:</p>
+                        <ul>
+                            <li><strong>Quotation Number:</strong> Auto-generated unique quotation ID (e.g., QTN-000001) displayed in top right</li>
+                            <li><strong>Scan Barcode:</strong> Quick product addition via barcode scanner</li>
+                            <li><strong>Customer & Date:</strong> Select customer and set quotation date</li>
+                            <li><strong>Price Type:</strong> Choose between Retail or Wholesale pricing</li>
+                            <li><strong>Add Products:</strong> Browse and select products from inventory</li>
+                            <li><strong>Cart Items:</strong> View and manage products in quotation</li>
+                            <li><strong>Bill Summary:</strong> Shows Discount, Subtotal, and Net Total calculations</li>
+                        </ul>
+
+                        <div class="screenshot-placeholder">
+                            <img src="screenshots/new-quotation-interface.png" alt="New Quotation Interface" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: new-quotation-interface.png<br><small>Place your new quotation interface screenshot here</small></div>'">
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h4>Creating a New Quotation</h4>
+                        <ol>
+                            <li>Navigate to <strong>Shops → Quotations</strong></li>
+                            <li>The "New Quotation / Bill" screen opens automatically</li>
+                            <li><strong>Select Customer & Date:</strong>
+                                <ul>
+                                    <li>Click the <strong>Customer dropdown</strong> to select a customer (e.g., "William Taylor")</li>
+                                    <li>Select the quotation date (defaults to current date, format: DD/MM/YYYY)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Choose Price Type:</strong>
+                                <ul>
+                                    <li>Select <strong>Retail</strong> for standard customer pricing</li>
+                                    <li>Select <strong>Wholesale</strong> for bulk/wholesale pricing</li>
+                                </ul>
+                            </li>
+                            <li><strong>Add Products to Quotation:</strong> Use one of three methods:
+                                <ul>
+                                    <li><strong>Scan Barcode:</strong> Type or scan product barcode in the "Scan barcode..." field and click <strong>"Add"</strong></li>
+                                    <li><strong>Browse Products:</strong> Click the purple <strong>"Browse Products"</strong> button to see product catalog</li>
+                                    <li><strong>Focus Barcode (ESC):</strong> Press ESC key to quickly focus barcode input field</li>
+                                </ul>
+                            </li>
+                            <li><strong>Manage Cart Items:</strong>
+                                <ul>
+                                    <li>Added products appear in the "Cart Items" table showing Product, Price, Qty, Total, and Action columns</li>
+                                    <li>Adjust quantities as needed</li>
+                                    <li>Remove items using the Action column buttons</li>
+                                </ul>
+                            </li>
+                            <li><strong>Review Bill Summary:</strong>
+                                <ul>
+                                    <li><strong>Discount (LKR):</strong> Enter discount amount if needed (default: 0)</li>
+                                    <li><strong>Subtotal:</strong> Total before discount</li>
+                                    <li><strong>Discount:</strong> Applied discount amount (displayed in red with minus sign)</li>
+                                    <li><strong>Net Total:</strong> Final quotation amount</li>
+                                </ul>
+                            </li>
+                            <li><strong>Complete Quotation:</strong>
+                                <ul>
+                                    <li>Click <strong>"✅ Complete Quotation (F9)"</strong> button or press F9 key</li>
+                                    <li>Quotation is saved and can be viewed/edited later</li>
+                                    <li>Quotation can be printed or emailed to customer</li>
+                                    <li>Can be converted to a sale when customer accepts</li>
+                                </ul>
+                            </li>
+                        </ol>
+
+                        <div class="screenshot-placeholder">
+                            <img src="screenshots/quotations.png" alt="Creating Quotation" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: quotations.png<br><small>Place your quotations screenshot here</small></div>'">
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h4>Keyboard Shortcuts</h4>
+                        <p>Speed up quotation creation with these keyboard shortcuts:</p>
+                        <ul>
+                            <li><strong>F9:</strong> Complete Quotation - Save and finalize the quotation</li>
+                            <li><strong>F8:</strong> Clear Cart - Remove all items from cart</li>
+                            <li><strong>ESC:</strong> Focus Barcode - Jump to barcode input field</li>
+                        </ul>
+                        <p class="note">Shortcuts are displayed at the bottom of the quotation screen for quick reference.</p>
+                    </div>
+
+                    <div class="note">
+                        <strong>Note:</strong> Empty cart message displays "No items in cart - Scan barcode or select product to add" when cart is empty. The quotation number (QTN-XXXXXX) is automatically generated and cannot be edited manually. Quotations can be converted to sales from the Edit Quotations screen.
+                    </div>
+
+                    <div class="tip">
+                        <strong>💡 Tips for Quotations:</strong>
+                        <ul>
+                            <li>Create quotations to provide customers with price estimates before finalizing sales</li>
+                            <li>Use the same interface as sales for familiar workflow</li>
+                            <li>Include all relevant products and discounts for accurate pricing</li>
+                            <li>Print or email quotations to customers for approval</li>
+                            <li>Convert approved quotations to sales with one click from Edit Quotations</li>
+                            <li>Track quotation validity periods and follow up with customers</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="edit-quotations" class="subsection">
+                    <h3>Edit Quotations</h3>
+                    <p>View, edit, and manage existing quotations. The Edit Quotation interface allows you to modify saved quotations, update product details, and convert approved quotations into sales.</p>
+                    
+                    <div class="step">
+                        <h4>Understanding the Edit Quotation Interface</h4>
+                        <p>The Edit Quotation screen has the following key elements:</p>
+                        <ul>
+                            <li><strong>Title Bar:</strong> Shows "Edit Quotation" with navigation options</li>
+                            <li><strong>All Quotations Button:</strong> Blue button to view list of all quotations</li>
+                            <li><strong>Selected Quotation:</strong> Displays currently selected quotation number in top right (e.g., "None Selected")</li>
+                            <li><strong>Select Quotation Dropdown:</strong> Purple bar with dropdown to select quotation to edit</li>
+                            <li><strong>Edit Area:</strong> Shows quotation details once selected (similar to new quotation interface)</li>
+                            <li><strong>Keyboard Shortcuts:</strong> F9: Update | F8: Clear | ESC: Focus Barcode</li>
+                        </ul>
+
+                        <div class="screenshot-placeholder">
+                            <img src="screenshots/edit-quotation-interface.png" alt="Edit Quotation Interface" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: edit-quotation-interface.png<br><small>Place your edit quotation interface screenshot here</small></div>'">
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h4>Accessing Edit Quotations</h4>
+                        <ol>
+                            <li>Navigate to <strong>Shops → Edit Quotations</strong></li>
+                            <li>The Edit Quotation screen opens</li>
+                            <li>Initially displays "Select a Quotation" message with clipboard icon</li>
+                            <li>Message states: "Please select a quotation from the dropdown above to start editing."</li>
+                        </ol>
+                    </div>
+
+                    <div class="step">
+                        <h4>Selecting a Quotation to Edit</h4>
+                        <ol>
+                            <li>Click on the <strong>"Select Quotation to Edit"</strong> dropdown in the purple bar</li>
+                            <li>Dropdown shows list of existing quotations with:
+                                <ul>
+                                    <li>Quotation Number (e.g., QTN-000001)</li>
+                                    <li>Customer Name</li>
+                                    <li>Date</li>
+                                    <li>Total Amount</li>
+                                </ul>
+                            </li>
+                            <li>Click on a quotation to select it</li>
+                            <li>Selected quotation number appears in top right corner</li>
+                            <li>Quotation details load in the edit area below</li>
+                        </ol>
+                    </div>
+
+                    <div class="step">
+                        <h4>Editing Quotation Details</h4>
+                        <p>Once a quotation is selected, you can modify:</p>
+                        <ol>
+                            <li><strong>Customer Information:</strong> Change the customer if needed</li>
+                            <li><strong>Date:</strong> Update the quotation date</li>
+                            <li><strong>Price Type:</strong> Switch between Retail and Wholesale</li>
+                            <li><strong>Products:</strong>
+                                <ul>
+                                    <li>Add new products using barcode scan or Browse Products</li>
+                                    <li>Remove existing products</li>
+                                    <li>Adjust quantities</li>
+                                    <li>Update prices (if permitted)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Discount:</strong> Modify discount amount</li>
+                            <li><strong>Review Updated Totals:</strong> Check Subtotal, Discount, and Net Total</li>
+                        </ol>
+                    </div>
+
+                    <div class="step">
+                        <h4>Saving Changes</h4>
+                        <ol>
+                            <li>After making all necessary changes, review the quotation</li>
+                            <li>Click <strong>"Update Quotation (F9)"</strong> button or press F9</li>
+                            <li>Changes are saved to the existing quotation</li>
+                            <li>Success message confirms update</li>
+                            <li>Updated quotation can be printed or emailed</li>
+                        </ol>
+                    </div>
+
+                    <div class="step">
+                        <h4>Converting Quotation to Sale</h4>
+                        <ol>
+                            <li>Select the approved quotation from the dropdown</li>
+                            <li>Review all quotation details</li>
+                            <li>Click <strong>"Convert to Sale"</strong> button (if available)</li>
+                            <li>Quotation is transformed into an actual sale transaction</li>
+                            <li>New invoice is generated</li>
+                            <li>Inventory is updated accordingly</li>
+                            <li>Quotation status changes to "Converted"</li>
+                        </ol>
+                    </div>
+
+                    <div class="step">
+                        <h4>Viewing All Quotations</h4>
+                        <ol>
+                            <li>Click the <strong>"All Quotations"</strong> blue button in the top bar</li>
+                            <li>View list of all quotations with details:
+                                <ul>
+                                    <li>Quotation Number</li>
+                                    <li>Customer Name</li>
+                                    <li>Date Created</li>
+                                    <li>Total Amount</li>
+                                    <li>Status (Pending, Approved, Converted, Expired)</li>
+                                    <li>Actions (View, Edit, Delete, Print)</li>
+                                </ul>
+                            </li>
+                            <li>Filter or search for specific quotations</li>
+                            <li>Select any quotation to edit from this list</li>
+                        </ol>
+                    </div>
+
+                    <div class="step">
+                        <h4>Keyboard Shortcuts</h4>
+                        <p>Available shortcuts when editing a quotation:</p>
+                        <ul>
+                            <li><strong>F9:</strong> Update - Save changes to the quotation</li>
+                            <li><strong>F8:</strong> Clear - Clear the cart/form</li>
+                            <li><strong>ESC:</strong> Focus Barcode - Jump to barcode input field for quick product addition</li>
+                        </ul>
+                    </div>
+
+                    <div class="note">
+                        <strong>Note:</strong> When no quotation is selected, the screen displays a message prompting you to select one from the dropdown. You cannot edit a quotation that has already been converted to a sale. The "Selected Quotation" indicator in the top right shows "None Selected" until you choose a quotation.
+                    </div>
+
+                    <div class="tip">
+                        <strong>💡 Tips for Managing Quotations:</strong>
+                        <ul>
+                            <li>Use the "All Quotations" view to get an overview of all pending quotations</li>
+                            <li>Update quotations promptly when customers request changes</li>
+                            <li>Convert approved quotations to sales immediately to avoid inventory discrepancies</li>
+                            <li>Keep track of quotation validity periods and follow up with customers</li>
+                            <li>Archive or delete expired quotations to keep the list manageable</li>
+                            <li>Use the same keyboard shortcuts as sales for efficient editing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="goods-transfer-request" class="subsection">
+                    <h3>Goods Transfer Request</h3>
+                    <p>Request stock transfers from the main store to your shop location. Product Transfer Requests help maintain optimal inventory levels by facilitating movement of goods between locations.</p>
+                    
+                    <div class="step">
+                        <h4>Understanding Product Transfer Requests Interface</h4>
+                        <p>The Product Transfer Requests screen displays:</p>
+                        <ul>
+                            <li><strong>Page Title:</strong> "Product Transfer Requests"</li>
+                            <li><strong>Back Button:</strong> Return to previous screen (cyan button)</li>
+                            <li><strong>Add New Transfer Request Button:</strong> Create new request (cyan button in top right)</li>
+                            <li><strong>Transfer List Table:</strong> Shows all transfer requests with columns:
+                                <ul>
+                                    <li><strong>Transfer No:</strong> Unique transfer identifier (e.g., PTR-YYYYMMDDHHMMSS)</li>
+                                    <li><strong>Date:</strong> Request creation date</li>
+                                    <li><strong>User:</strong> User who created the request</li>
+                                    <li><strong>Products:</strong> List or count of products in request</li>
+                                    <li><strong>Status:</strong> Current status (Pending, Approved, Completed, Rejected)</li>
+                                    <li><strong>Actions:</strong> View, Edit, Delete buttons</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="screenshot-placeholder">
+                            <img src="screenshots/transfer-requests-list.png" alt="Product Transfer Requests List" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: transfer-requests-list.png<br><small>Place your transfer requests list screenshot here</small></div>'">
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h4>Accessing Product Transfer Requests</h4>
+                        <ol>
+                            <li>Navigate to <strong>Shops → Goods Transfer Request</strong></li>
+                            <li>The Product Transfer Requests list page displays</li>
+                            <li>When no requests exist, message shows: "No Product Transfer Requests found"</li>
+                            <li>Click <strong>"Add New Transfer Request"</strong> to create a new request</li>
+                        </ol>
+                    </div>
+
+                    <div class="step">
+                        <h4>Creating a New Transfer Request</h4>
+                        <ol>
+                            <li>Click the <strong>"Add New Transfer Request"</strong> button</li>
+                            <li>The "Create Product Transfer Request" modal appears</li>
+                            <li><strong>Order Information Section (Blue header):</strong>
+                                <ul>
+                                    <li><strong>Transfer Number:</strong> Auto-generated unique ID (read-only, e.g., PTR-202501021623?)</li>
+                                    <li><strong>Order Date *</strong> (required): Select transfer request date (format: DD/MM/YYYY)</li>
+                                    <li><strong>User *</strong> (required): Select user responsible from dropdown (default: "Select User")</li>
+                                </ul>
+                            </li>
+                            <li><strong>Products Section (Blue header):</strong>
+                                <ul>
+                                    <li><strong>Product *</strong> (required): Select product from dropdown (default: "Select Product")</li>
+                                    <li><strong>Unit *</strong> (required): Select unit of measurement from dropdown (default: "Select Unit")</li>
+                                    <li><strong>Quantity *</strong> (required): Enter requested quantity (default: 1)</li>
+                                </ul>
+                            </li>
+                            <li>Click <strong>"Add Product"</strong> to add the product to the request</li>
+                            <li>Repeat steps to add multiple products</li>
+                            <li>Added products appear in a table below</li>
+                            <li>Review all information for accuracy</li>
+                            <li>Click <strong>"Create Ptr"</strong> (blue button) to submit the request</li>
+                            <li>Click <strong>"Cancel"</strong> (gray button) to discard the request</li>
+                        </ol>
+
+                        <div class="screenshot-placeholder">
+                            <img src="screenshots/create-transfer-request.png" alt="Create Product Transfer Request" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: create-transfer-request.png<br><small>Place your create transfer request screenshot here</small></div>'">
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h4>Managing Transfer Requests</h4>
+                        <p>From the Product Transfer Requests list, you can:</p>
+                        <ul>
+                            <li><strong>View Details:</strong> Click on a request to see complete information</li>
+                            <li><strong>Edit Request:</strong> Modify pending requests (only available before approval)</li>
+                            <li><strong>Delete Request:</strong> Remove cancelled or rejected requests</li>
+                            <li><strong>Track Status:</strong> Monitor request progress through status updates</li>
+                            <li><strong>Print Request:</strong> Generate printable transfer request document</li>
+                        </ul>
+                    </div>
+
+                    <div class="step">
+                        <h4>Transfer Request Status Types</h4>
+                        <p>Transfer requests go through several status stages:</p>
+                        <ul>
+                            <li><strong>Pending:</strong> Request submitted, awaiting review</li>
+                            <li><strong>Approved:</strong> Request approved, items being prepared</li>
+                            <li><strong>In Transit:</strong> Items shipped from store to shop</li>
+                            <li><strong>Completed:</strong> Items received and confirmed at shop</li>
+                            <li><strong>Rejected:</strong> Request denied (with reason)</li>
+                            <li><strong>Cancelled:</strong> Request cancelled by requester</li>
+                        </ul>
+                    </div>
+
+                    <div class="note">
+                        <strong>Note:</strong> All fields marked with an asterisk (*) are required. The Transfer Number (PTR-YYYYMMDDHHMMSS) is automatically generated based on the creation timestamp. Transfer requests do not update inventory until they are completed via Goods Transfer Returns.
+                    </div>
+
+                    <div class="tip">
+                        <strong>💡 Tips for Transfer Requests:</strong>
+                        <ul>
+                            <li>Create transfer requests when shop inventory falls below reorder levels</li>
+                            <li>Include accurate quantities to avoid multiple requests</li>
+                            <li>Monitor pending requests and follow up if delays occur</li>
+                            <li>Coordinate with store management for faster approval</li>
+                            <li>Use the correct unit of measurement as defined in product settings</li>
+                            <li>Keep transfer requests organized by checking status regularly</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="goods-transfer-returns" class="subsection">
+                    <h3>Goods Transfer Returns</h3>
+                    <p>Process stock returns from shop to store for damaged, expired, or excess inventory. Stock Transfer Returns help manage reverse logistics and maintain accurate inventory levels across locations.</p>
+                    
+                    <div class="step">
+                        <h4>Understanding Stock Transfer Returns Interface</h4>
+                        <p>The Stock Transfer Returns screen displays:</p>
+                        <ul>
+                            <li><strong>Page Title:</strong> "Stock Transfer Returns"</li>
+                            <li><strong>Back Button:</strong> Return to previous screen (cyan button)</li>
+                            <li><strong>Add New Stock Transfer Return Button:</strong> Create new return (cyan button in top right)</li>
+                            <li><strong>Returns List Table:</strong> Shows all stock transfer returns with columns:
+                                <ul>
+                                    <li><strong>Return Number:</strong> Unique return identifier (e.g., STR-YYYYMMDD-XXXX)</li>
+                                    <li><strong>Date:</strong> Return creation date</li>
+                                    <li><strong>User:</strong> User who created the return</li>
+                                    <li><strong>Status:</strong> Current status (Pending, Approved, Completed, Rejected)</li>
+                                    <li><strong>Actions:</strong> View, Edit, Delete buttons</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="screenshot-placeholder">
+                            <img src="screenshots/stock-transfer-returns-list.png" alt="Stock Transfer Returns List" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: stock-transfer-returns-list.png<br><small>Place your stock transfer returns list screenshot here</small></div>'">
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h4>Accessing Stock Transfer Returns</h4>
+                        <ol>
+                            <li>Navigate to <strong>Shops → Goods Transfer Returns</strong></li>
+                            <li>The Stock Transfer Returns list page displays</li>
+                            <li>When no returns exist, message shows: "No Stock Transfer Returns found"</li>
+                            <li>Click <strong>"Add New Stock Transfer Return"</strong> to create a new return</li>
+                        </ol>
+                    </div>
+
+                    <div class="step">
+                        <h4>Creating a New Stock Transfer Return</h4>
+                        <ol>
+                            <li>Click the <strong>"Add New Stock Transfer Return"</strong> button</li>
+                            <li>The "Create Stock Transfer Return" modal appears</li>
+                            <li><strong>Return Information Section (Blue header):</strong>
+                                <ul>
+                                    <li><strong>Return Number:</strong> Auto-generated unique ID (read-only, e.g., STR-20260102-0001)</li>
+                                    <li><strong>Return Date *</strong> (required): Select return date (format: DD/MM/YYYY, defaults to current date)</li>
+                                    <li><strong>Reason:</strong> Enter reason for return (text area with placeholder "e.g., Damaged, Expired, Quality issue")</li>
+                                </ul>
+                            </li>
+                            <li><strong>Products Section (Blue header):</strong>
+                                <ul>
+                                    <li><strong>Product *</strong> (required): Select product from dropdown (default: "Select Product")</li>
+                                    <li><strong>Unit *</strong> (required): Select unit of measurement from dropdown (default: "Select Unit")</li>
+                                    <li><strong>Quantity *</strong> (required): Enter return quantity (default: 1)</li>
+                                    <li><strong>Remove Button:</strong> Red button to remove product row</li>
+                                </ul>
+                            </li>
+                            <li>Click <strong>"Add Product"</strong> to add the product to the return</li>
+                            <li>Repeat steps to add multiple products</li>
+                            <li>Added products appear in a table below with Product, Unit, Quantity, and Remove columns</li>
+                            <li>Review all information for accuracy</li>
+                            <li>Click <strong>"Create Return"</strong> (blue button) to submit the return</li>
+                            <li>Click <strong>"Cancel"</strong> (gray button) to discard the return</li>
+                        </ol>
+
+                        <div class="screenshot-placeholder">
+                            <img src="screenshots/create-stock-transfer-return.png" alt="Create Stock Transfer Return" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: create-stock-transfer-return.png<br><small>Place your create stock transfer return screenshot here</small></div>'">
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h4>Common Reasons for Stock Transfer Returns</h4>
+                        <p>Typical reasons for returning stock to the store:</p>
+                        <ul>
+                            <li><strong>Damaged:</strong> Products damaged during transit or at shop</li>
+                            <li><strong>Expired:</strong> Products reaching or past expiration date</li>
+                            <li><strong>Quality Issue:</strong> Manufacturing defects or quality problems</li>
+                            <li><strong>Excess Stock:</strong> Overstocked items with low demand</li>
+                            <li><strong>Wrong Items:</strong> Products received in error</li>
+                            <li><strong>Slow Moving:</strong> Items not selling at expected rate</li>
+                            <li><strong>Seasonal:</strong> End of season stock to be redistributed</li>
+                        </ul>
+                    </div>
+
+                    <div class="step">
+                        <h4>Managing Stock Transfer Returns</h4>
+                        <p>From the Stock Transfer Returns list, you can:</p>
+                        <ul>
+                            <li><strong>View Details:</strong> Click on a return to see complete information</li>
+                            <li><strong>Edit Return:</strong> Modify pending returns (only available before processing)</li>
+                            <li><strong>Delete Return:</strong> Remove cancelled or rejected returns</li>
+                            <li><strong>Track Status:</strong> Monitor return progress through status updates</li>
+                            <li><strong>Print Return Note:</strong> Generate printable return documentation</li>
+                        </ul>
+                    </div>
+
+                    <div class="step">
+                        <h4>Stock Transfer Return Status Types</h4>
+                        <p>Returns go through several status stages:</p>
+                        <ul>
+                            <li><strong>Pending:</strong> Return created, awaiting approval</li>
+                            <li><strong>Approved:</strong> Return approved, items ready for collection</li>
+                            <li><strong>In Transit:</strong> Items being transported from shop to store</li>
+                            <li><strong>Completed:</strong> Items received and confirmed at store</li>
+                            <li><strong>Rejected:</strong> Return denied (with reason)</li>
+                            <li><strong>Cancelled:</strong> Return cancelled before processing</li>
+                        </ul>
+                    </div>
+
+                    <div class="step">
+                        <h4>Inventory Impact</h4>
+                        <p>When a stock transfer return is processed:</p>
+                        <ul>
+                            <li>Shop inventory is <strong>decreased</strong> by the return quantity</li>
+                            <li>Store inventory is <strong>increased</strong> when items are received</li>
+                            <li>Stock values are updated automatically</li>
+                            <li>Return transactions are logged for audit purposes</li>
+                            <li>Reports reflect the movement of returned stock</li>
+                        </ul>
+                    </div>
+
+                    <div class="note">
+                        <strong>Note:</strong> All fields marked with an asterisk (*) are required. The Return Number (STR-YYYYMMDD-XXXX) is automatically generated based on the return date and sequence. Inventory at the shop is reduced immediately upon return creation, while store inventory is updated upon confirmation of receipt.
+                    </div>
+
+                    <div class="tip">
+                        <strong>💡 Tips for Stock Transfer Returns:</strong>
+                        <ul>
+                            <li>Document reason clearly for proper tracking and analysis</li>
+                            <li>Inspect products before creating returns to ensure accuracy</li>
+                            <li>Process damaged or expired items promptly to maintain inventory quality</li>
+                            <li>Coordinate with store management before creating large returns</li>
+                            <li>Use correct unit measurements as defined in product settings</li>
+                            <li>Keep photos or documentation for damaged items for reference</li>
+                            <li>Monitor return status and follow up on pending approvals</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="sales-return" class="subsection">
+                    <h3>Sales Return</h3>
+                    <p>Process customer returns and refunds for sold items. The Sales Return module handles both product returns and cash refunds, with options for product replacement or full refund.</p>
+                    
+                    <div class="step">
+                        <h4>Understanding Sales Return Interface</h4>
+                        <p>The Sales Return list screen displays:</p>
+                        <ul>
+                            <li><strong>Back Button:</strong> Return to previous screen (cyan button)</li>
+                            <li><strong>Add New Sales Return Button:</strong> Create new return (cyan button in top right)</li>
+                            <li><strong>Returns List Table:</strong> Shows all sales returns with columns:
+                                <ul>
+                                    <li><strong>Return No:</strong> Unique return identifier</li>
+                                    <li><strong>Date:</strong> Return creation date</li>
+                                    <li><strong>Customer:</strong> Customer name</li>
+                                    <li><strong>Return Type:</strong> Product Return or Cash Refund</li>
+                                    <li><strong>Products:</strong> List or count of returned products</li>
+                                    <li><strong>Actions:</strong> View, Edit, Delete buttons</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="screenshot-placeholder">
+                            <img src="screenshots/sales-return-list.png" alt="Sales Return List" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: sales-return-list.png<br><small>Place your sales return list screenshot here</small></div>'">
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h4>Accessing Sales Returns</h4>
+                        <ol>
+                            <li>Navigate to <strong>Shops → Sales Return</strong></li>
+                            <li>The Sales Return list page displays</li>
+                            <li>When no returns exist, message shows: "No Product Returns found"</li>
+                            <li>Click <strong>"Add New Sales Return"</strong> to create a new return</li>
+                        </ol>
+                    </div>
+
+                    <div class="step">
+                        <h4>Understanding Create Sales Return Modal</h4>
+                        <p>The Create Sales Return interface has two main tabs:</p>
+                        <ul>
+                            <li><strong>Product Return Tab (Green):</strong> For exchanges or product replacements</li>
+                            <li><strong>Cash Refund Tab:</strong> For full cash refunds</li>
+                        </ul>
+                        
+                        <p>The modal includes:</p>
+                        <ul>
+                            <li><strong>Step Indicator:</strong> "Step 1: Select Items > Step 2: Review & Submit"</li>
+                            <li><strong>Available Sales Products Section:</strong>
+                                <ul>
+                                    <li>Invoice Number input field with Enter button</li>
+                                    <li>Message: "Enter an invoice number above to load products"</li>
+                                </ul>
+                            </li>
+                            <li><strong>Replacement Products Section:</strong>
+                                <ul>
+                                    <li>Search by name or barcode</li>
+                                    <li>Quantity input (default: 1)</li>
+                                    <li>Add button (purple)</li>
+                                    <li>Toggle: "Qty Return & Replacement 0" (green)</li>
+                                    <li>Table with Product, Qty, Unit Price, Total, Action columns</li>
+                                </ul>
+                            </li>
+                            <li><strong>Bill Summary:</strong>
+                                <ul>
+                                    <li>Total Return Value: Rs. 0.00</li>
+                                    <li>Replacement Value: Rs. 0.00</li>
+                                    <li>Settled: Rs. 0.00</li>
+                                    <li>Payment amount input field</li>
+                                </ul>
+                            </li>
+                            <li><strong>Action Buttons:</strong>
+                                <ul>
+                                    <li>Add Payment (blue button)</li>
+                                    <li>Print Bill (purple button)</li>
+                                    <li>Complete Return (green button)</li>
+                                    <li>Cancel (gray button)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Keyboard Shortcuts:</strong> "No payment created" / "Keyboard Shortcuts: F9 Complete Return | ESC Close"</li>
+                        </ul>
+
+                        <div class="screenshot-placeholder">
+                            <img src="screenshots/create-sales-return.png" alt="Create Sales Return" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: create-sales-return.png<br><small>Place your create sales return screenshot here</small></div>'">
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h4>Creating a Product Return (with Replacement)</h4>
+                        <ol>
+                            <li>Click <strong>"Add New Sales Return"</strong></li>
+                            <li>Ensure <strong>"Product Return"</strong> tab (green) is selected</li>
+                            <li><strong>Load Original Sale:</strong>
+                                <ul>
+                                    <li>Enter the invoice number in the Invoice Number field</li>
+                                    <li>Click <strong>"Enter"</strong> button or press Enter key</li>
+                                    <li>Products from that sale load into the Available Sales Products area</li>
+                                </ul>
+                            </li>
+                            <li><strong>Select Items to Return:</strong>
+                                <ul>
+                                    <li>From the loaded products, select items customer is returning</li>
+                                    <li>Specify return quantities for each item</li>
+                                    <li>System calculates Total Return Value</li>
+                                </ul>
+                            </li>
+                            <li><strong>Add Replacement Products (Optional):</strong>
+                                <ul>
+                                    <li>In Replacement Products section, search for new products</li>
+                                    <li>Enter quantity and click <strong>"Add"</strong></li>
+                                    <li>Added products appear in the table</li>
+                                    <li>System calculates Replacement Value</li>
+                                </ul>
+                            </li>
+                            <li><strong>Review Settlement:</strong>
+                                <ul>
+                                    <li>Check Total Return Value (amount customer paid)</li>
+                                    <li>Check Replacement Value (cost of new products)</li>
+                                    <li>Settled amount shows difference (refund due or additional payment needed)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Process Payment:</strong>
+                                <ul>
+                                    <li>If customer owes additional amount, collect payment</li>
+                                    <li>If refund is due, enter refund amount and click <strong>"Add Payment"</strong></li>
+                                </ul>
+                            </li>
+                            <li>Click <strong>"Complete Return"</strong> (green button) or press F9</li>
+                            <li>Print return receipt if needed</li>
+                        </ol>
+                    </div>
+
+                    <div class="step">
+                        <h4>Creating a Cash Refund</h4>
+                        <ol>
+                            <li>Click <strong>"Add New Sales Return"</strong></li>
+                            <li>Select <strong>"Cash Refund"</strong> tab</li>
+                            <li>Enter invoice number to load original sale</li>
+                            <li>Select items customer is returning</li>
+                            <li>Specify return quantities</li>
+                            <li>System calculates refund amount</li>
+                            <li>Process refund payment</li>
+                            <li>Click <strong>"Complete Return"</strong> to finalize</li>
+                            <li>Print refund receipt</li>
+                        </ol>
+                    </div>
+
+                    <div class="step">
+                        <h4>Return Types Explained</h4>
+                        <p><strong>Product Return (Exchange):</strong></p>
+                        <ul>
+                            <li>Customer returns product(s) and takes replacement product(s)</li>
+                            <li>Used when customer wants to exchange for different item or size</li>
+                            <li>Can involve additional payment or refund based on price difference</li>
+                            <li>Inventory: Returned items added back, replacement items deducted</li>
+                        </ul>
+
+                        <p><strong>Cash Refund:</strong></p>
+                        <ul>
+                            <li>Customer returns product(s) and receives money back</li>
+                            <li>Used when customer wants full refund without replacement</li>
+                            <li>Refund amount based on original purchase price</li>
+                            <li>Inventory: Returned items added back to stock</li>
+                        </ul>
+                    </div>
+
+                    <div class="step">
+                        <h4>Keyboard Shortcuts</h4>
+                        <p>Available shortcuts in the sales return interface:</p>
+                        <ul>
+                            <li><strong>F9:</strong> Complete Return - Finalize the return transaction</li>
+                            <li><strong>ESC:</strong> Close - Close the return modal</li>
+                        </ul>
+                    </div>
+
+                    <div class="step">
+                        <h4>Inventory and Financial Impact</h4>
+                        <p>When a sales return is processed:</p>
+                        <ul>
+                            <li><strong>Inventory:</strong> Returned products added back to stock</li>
+                            <li><strong>Inventory:</strong> Replacement products (if any) deducted from stock</li>
+                            <li><strong>Revenue:</strong> Original sale revenue reduced by return amount</li>
+                            <li><strong>Cash Flow:</strong> Refunds reduce cash on hand</li>
+                            <li><strong>Reports:</strong> Returns tracked separately for analysis</li>
+                            <li><strong>Customer Account:</strong> Transaction history updated</li>
+                        </ul>
+                    </div>
+
+                    <div class="note">
+                        <strong>Note:</strong> Sales returns can only be processed for completed sales. The invoice number must be valid and from an existing sale. Partial returns are allowed - you don't need to return all items from a sale. The "Qty Return & Replacement 0" toggle helps ensure return and replacement quantities are balanced.
+                    </div>
+
+                    <div class="tip">
+                        <strong>💡 Tips for Processing Returns:</strong>
+                        <ul>
+                            <li>Verify the invoice number is correct before loading products</li>
+                            <li>Inspect returned products for damage or defects</li>
+                            <li>Use Product Return tab for exchanges to maintain better inventory tracking</li>
+                            <li>Use Cash Refund tab for straightforward monetary refunds</li>
+                            <li>Document return reasons for analysis and quality control</li>
+                            <li>Check company return policy and time limits before processing</li>
+                            <li>Press F9 for quick return completion without using mouse</li>
+                            <li>Print receipts for both customer and store records</li>
+                        </ul>
                     </div>
                 </div>
             </section>
