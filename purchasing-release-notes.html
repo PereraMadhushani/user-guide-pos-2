@@ -60,17 +60,38 @@
                     <ol>
                         <li>Go to <strong>Purchasing & Stock → Product Release Notes</strong></li>
                         <li>Click <strong>"Create Release Note"</strong></li>
-                        <li>Enter release details:
+                        <li>Fill in the <strong>PRN Details</strong> section:
                             <ul>
-                                <li><strong>Release Date:</strong> Date of release</li>
-                                <li><strong>From Location:</strong> Storage/production location</li>
-                                <li><strong>To Location:</strong> Active inventory location</li>
-                                <li><strong>Remarks:</strong> Optional notes</li>
+                                <li><strong>Product Transfer Request:</strong> Select the related transfer request from the dropdown (required)</li>
+                                <li><strong>Release Date:</strong> Select the date when products are being released (required)</li>
+                                <li><strong>Status:</strong> Current status of the release (Pending, Completed, etc.)</li>
+                                <li><strong>User:</strong> Select the user responsible for the release (required)</li>
+                                <li><strong>Remark:</strong> Add optional notes or remarks about the release</li>
                             </ul>
                         </li>
-                        <li>Add products and quantities released</li>
-                        <li>Save to update stock</li>
+                        <li>Add products in the <strong>Products</strong> section:
+                            <ul>
+                                <li>Click the <strong>"+ Add Product"</strong> button to add items</li>
+                                <li>The table displays the following columns:
+                                    <ul>
+                                        <li><strong>Product:</strong> Name of the product being released</li>
+                                        <li><strong>Unit:</strong> Measurement unit of the product</li>
+                                        <li><strong>Qty:</strong> Quantity being released</li>
+                                        <li><strong>Unit Price (LKR):</strong> Price per unit</li>
+                                        <li><strong>Total (LKR):</strong> Total amount (automatically calculated)</li>
+                                        <li><strong>Action:</strong> Remove product from the list</li>
+                                    </ul>
+                                </li>
+                                <li>Add multiple products as needed</li>
+                            </ul>
+                        </li>
+                        <li>Review all details for accuracy</li>
+                        <li>Click <strong>"Create PRN"</strong> to save and release the products, or <strong>"Cancel"</strong> to discard changes</li>
                     </ol>
+
+                    <div class="warning">
+                        <strong>⚠️ Important:</strong> When you select a Product Transfer Request from the dropdown, the products table is automatically populated with all products from that transfer request. You cannot add additional products outside of the transfer request.
+                    </div>
 
                     <div class="screenshot-placeholder">
                         <img src="screenshots/product-release-note-create.png" alt="Product Release Note" onerror="this.parentElement.innerHTML='<div class=&quot;placeholder-img&quot;>📸 Screenshot: product-release-note.png<br><small>Place your product release note screenshot here</small></div>'">

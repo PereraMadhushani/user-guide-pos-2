@@ -66,7 +66,7 @@
                                     <li><strong>GRN Number:</strong> Auto-generated unique identifier</li>
                                     <li><strong>Supplier:</strong> Select the supplier providing the goods (required)</li>
                                     <li><strong>GRN Date:</strong> Date goods were received (required)</li>
-                                    <li><strong>Purchase Order:</strong> Link to related POR (optional but recommended)</li>
+                                    <li><strong>Purchase Order:</strong> Link to related POR</li>
                                     <li><strong>Discount:</strong> Apply overall discount if applicable</li>
                                     <li><strong>Tax:</strong> System calculates tax based on configured rates</li>
                                     <li><strong>Remarks:</strong> Add notes or special instructions</li>
@@ -74,7 +74,7 @@
                             </li>
                             <li>Add products to the GRN table:
                                 <ul>
-                                    <li>If a Purchase Order is linked, products are <strong>automatically populated</strong> from that PO</li>
+                                    <li>After selecting a Purchase Order Number, products are <strong>automatically populated</strong> from that PO</li>
                                     <li>When a PO is selected, you <strong>cannot add new products</strong> - only the PO items will appear in the table</li>
                                     <li>You can only modify the received quantity for products already in the PO and remove the unnecessary products.</li>
                                     <li>Enter received quantity (in purchase units)</li>
@@ -85,13 +85,6 @@
                             <li>Review all information for accuracy</li>
                             <li>Click <strong>"Create GRN"</strong> to finalize and update inventory</li>
                         </ol>
-
-                        <div class="info-box">
-                            <h4>GRN Form Overview</h4>
-                            <p><strong>Header Section:</strong> Contains supplier info, dates, and financial details (discount, tax, totals).</p>
-                            <p><strong>Products Table:</strong> Lists received items with quantity, unit price, and line amounts. The system matches received quantities against the linked Purchase Order.</p>
-                            <p><strong>Stock Update:</strong> Upon confirmation, all received quantities are added to the relevant inventory, using the purchase unit defined for each product.</p>
-                        </div>
 
                         <div class="screenshot-placeholder">
                             <img src="screenshots/grn-create.png" alt="Create GRN" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: grn-create.png<br><small>Place your GRN creation screenshot here</small></div>'">
@@ -116,20 +109,17 @@
                                 </ul>
                             </li>
                             <li>Click on any row or the <strong>"View"</strong> button to see detailed product information and receipts</li>
-                            <li>Use <strong>"Delete"</strong> to remove GRNs (if they haven't been processed or linked to returns)</li>
                         </ol>
 
                         <div class="screenshot-placeholder">
                             <img src="screenshots/goodsreceivednote-list.png" alt="List of GRN" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: goodsreceivednote-list.png<br><small>Place your GRN list screenshot here</small></div>'">
                         </div>
                     </div>
-
-                        <div class="warning">
-                            <strong>⚠️ Important:</strong> When a Purchase Order is linked to the GRN, the product list is automatically filled from that PO. You cannot add products that were not in the original PO. This ensures that received goods match the ordered items for proper tracking and reconciliation.
-                        </div>
-
                     <div class="note">
-                        <strong>Note:</strong> Creating and confirming a GRN automatically updates product stock levels in the system immediately.
+                        <strong>Note:</strong>
+                        <ul>
+                            <li>When you delete a GRN, its status automatically changes to <em>Inactive</em> and the associated stock adjustments are reversed.</li>
+                        </ul>
                     </div>
             </section>
 

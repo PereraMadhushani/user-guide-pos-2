@@ -60,12 +60,20 @@
                     <ol>
                         <li>Go to <strong>Purchasing & Stock → Product Transfer Request</strong></li>
                         <li>Click <strong>"Create Transfer Request"</strong></li>
-                        <li>Enter request details:
+                        <li>Enter request details in the <strong>Order Information</strong> section:
                             <ul>
-                                <li><strong>From Location:</strong> Source location</li>
-                                <li><strong>To Location:</strong> Destination location</li>
-                                <li><strong>Transfer Date:</strong> Date for transfer</li>
-                                <li><strong>Remarks:</strong> Optional notes</li>
+                                <li><strong>Transfer Number:</strong> Auto-generated unique identifier (read-only)</li>
+                                <li><strong>Order Date:</strong> Select the date for this transfer (required)</li>
+                                <li><strong>User:</strong> Select the user responsible for this transfer (required)</li>
+                            </ul>
+                        </li>
+                        <li>Add products to transfer in the <strong>Products</strong> section:
+                            <ul>
+                                <li>Click <strong>"Add Product"</strong> to add items</li>
+                                <li><strong>Product:</strong> Select the product to transfer (required)</li>
+                                <li><strong>Unit:</strong> Select the measurement unit for the product (required)</li>
+                                <li><strong>Quantity:</strong> Enter the quantity to transfer (required)</li>
+                                <li>Add multiple products as needed</li>
                             </ul>
                         </li>
                         <li>Add products and quantities to transfer</li>
@@ -75,15 +83,6 @@
                     <div class="screenshot-placeholder">
                         <img src="screenshots/product-transfer-request-create.png" alt="Product Transfer Request" onerror="this.parentElement.innerHTML='<div class=&quot;placeholder-img&quot;>📸 Screenshot: product-transfer-request-create.png<br><small>Place your product transfer request screenshot here</small></div>'">
                     </div>
-                </div>
-
-                <div class="tip">
-                    <strong>💡 Tips:</strong>
-                    <ul>
-                        <li>Ensure both locations have proper permissions</li>
-                        <li>Track transfers for audit and reconciliation</li>
-                        <li>Include remarks for clarity</li>
-                    </ul>
                 </div>
             </section>
 

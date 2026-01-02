@@ -118,15 +118,34 @@
                         <strong>💡 Tip:</strong> Use the search and filter options to quickly find specific products in large inventories.
                     </div>
 
-                <div class="tip">
-                    <strong>💡 Tips:</strong>
-                    <ul>
-                        <li>Use the search and filter options to quickly find specific products</li>
-                        <li>Duplicate products to create similar items faster</li>
-                        <li>Set minimum stock levels to get low stock alerts</li>
-                        <li>Use meaningful SKUs/Barcodes for easy tracking</li>
-                    </ul>
+                <div class="step">
+                    <h4>Stock Quantity Management Logic</h4>
+                    <p>The system automatically manages product quantities across two locations (Store and Shop) based on different operations:</p>
+                    
+                    <div class="info-box">
+                        <h5>Store Quantity:</h5>
+                        <ul>
+                            <li><strong>GRN (Goods Received Note):</strong> When you add a GRN, the store quantity <strong>increases</strong> ✅</li>
+                            <li><strong>GRN Return:</strong> When you return goods via GRN return, the store quantity <strong>decreases</strong> ⬇️</li>
+                            <li><strong>Product Release Note:</strong> When you release products from store to shop, the store quantity <strong>decreases</strong> ⬇️</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box">
+                        <h5>Shop Quantity:</h5>
+                        <ul>
+                            <li><strong>Product Release Note:</strong> When you receive products from store, the shop quantity <strong>increases</strong> ✅</li>
+                            <li><strong>Sales:</strong> When you make a sale, the shop quantity <strong>decreases</strong> ⬇️</li>
+                            <li><strong>Sales Return:</strong> When a customer returns items, the shop quantity <strong>increases</strong> ✅</li>
+                        </ul>
+                    </div>
+
+                    <div class="note">
+                        <strong>Note:</strong> All quantity adjustments happen automatically when you process the respective transactions. You don't need to manually update stock levels.
+                    </div>
                 </div>
+
+                
             </section>
 
             <section id="categories" class="section">

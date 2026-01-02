@@ -62,13 +62,13 @@
                             <li>Click <strong>"Create New GRN Return"</strong> or <strong>"Add New Return"</strong></li>
                             <li>Fill in the return header information:
                                 <ul>
-                                    <li><strong>GRN Number:</strong> Auto-generated unique identifier</li>
-                                    <li><strong>Datw:</strong> Select the GRN containing the items being returned (required)</li>
+                                    <li><strong>GRN Number:</strong> Select from the dropdown the GRN containing the items being returned (required)</li>
+                                    <li><strong>Date:</strong> Date of the return (required)</li>
                                 </ul>
                             </li>
                             <li>Add products to return:
                                 <ul>
-                                    <li>Products from the linked GRN appear in the table automatically</li>
+                                    <li>After selecting a <strong>GRN Number</strong> from the dropdown, the product table <strong>automatically fills</strong> with all products from that GRN</li>
                                     <li>Enter the <strong>Return Quantity</strong> for each product being returned (in purchase units)</li>
                                     <li>Unit price is pre-filled from the original GRN</li>
                                     <li>System calculates credit line totals automatically</li>
@@ -79,13 +79,6 @@
                             <li>Click <strong>"Create GRN Return"</strong> to finalize and generate credit note</li>
                         </ol>
 
-                        <div class="info-box">
-                            <h4>GRN Return Impact</h4>
-                            <p><strong>Inventory Update:</strong> Returned quantities are deducted from current stock levels.</p>
-                            <p><strong>Credit Note:</strong> A credit note is automatically generated for supplier accounting purposes.</p>
-                            <p><strong>Financial Record:</strong> The return amount is recorded as a credit against the original purchase.</p>
-                        </div>
-
                         <div class="screenshot-placeholder">
                             <img src="screenshots/grnReturn-create.png" alt="GRN Returns" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: grn-returns.png<br><small>Place your GRN returns screenshot here</small></div>'">
                         </div>
@@ -93,10 +86,6 @@
 
                     <div class="note">
                         <strong>Note:</strong> GRN Returns must be linked to an existing GRN. You cannot create returns for items that were not previously received through a GRN.
-                    </div>
-
-                    <div class="tip">
-                        <strong>💡 Tip:</strong> Keep detailed remarks when processing returns to maintain an audit trail for quality issues and supplier accountability.
                     </div>
             </section>
 
