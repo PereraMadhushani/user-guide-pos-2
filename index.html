@@ -4569,24 +4569,49 @@
             });
         });
 
-        // Highlight active section in sidebar
-        const sections = document.querySelectorAll('.section');
+        // Highlight active section in sidebar and auto-scroll sidebar
+        const sections = document.querySelectorAll('.section, .subsection');
         const navLinks = document.querySelectorAll('.sidebar-nav a');
+        const sidebar = document.querySelector('.sidebar');
 
         window.addEventListener('scroll', () => {
             let current = '';
+            
+            // Find the current section in viewport
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 100)) {
+                if (scrollY >= (sectionTop - 200)) {
                     current = section.getAttribute('id');
                 }
             });
 
+            // Update active state and scroll sidebar
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${current}`) {
                     link.classList.add('active');
+                    
+                    // Auto-scroll sidebar to keep active link visible
+                    const linkTop = link.offsetTop;
+                    const linkHeight = link.clientHeight;
+                    const sidebarScrollTop = sidebar.scrollTop;
+                    const sidebarHeight = sidebar.clientHeight;
+                    
+                    // Check if link is outside visible area
+                    if (linkTop < sidebarScrollTop) {
+                        // Link is above visible area, scroll up
+                        sidebar.scrollTo({
+                            top: linkTop - 20,
+                            behavior: 'smooth'
+                        });
+                    } else if (linkTop + linkHeight > sidebarScrollTop + sidebarHeight) {
+                        // Link is below visible area, scroll down
+                        sidebar.scrollTo({
+                            top: linkTop - sidebarHeight + linkHeight + 20,
+                            behavior: 'smooth'
+                        });
+                    }
                 }
             });
         });
