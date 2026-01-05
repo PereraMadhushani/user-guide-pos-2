@@ -17,8 +17,8 @@
             </div>
             <nav class="main-nav">
                 <a href="#getting-started">Getting Started</a>
-                <a href="#features">Features</a>
-                <a href="#modules">Modules</a>
+                <!-- <a href="#features">Features</a>
+                <a href="#modules">Modules</a> -->
                 <a href="#faq">FAQ</a>
             </nav>
         </div>
@@ -31,6 +31,7 @@
                 <h3>Contents</h3>
                 <ul>
                     <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#installation">Installation</a></li>
                     <li><a href="#getting-started">Getting Started</a>
                         <ul>
                             <li><a href="#login">Login & Authentication</a></li>
@@ -127,6 +128,110 @@
                     <li>✓ Expense and income tracking</li>
                     <li>✓ Activity logging and audit trails</li>
                 </ul>
+            </section>
+
+            <!-- Installation Section -->
+            <section id="installation" class="section">
+                <h2>Installation</h2>
+                <p>Follow these steps to install the JPOS System on your server or localhost environment.</p>
+
+                <div class="step">
+                    <h4>Step 1: Upload the Project</h4>
+                    <ul>
+                        <li>Upload the <strong>JPOS System</strong> project files to your server or localhost directory.</li>
+                        <li>Make sure the project root contains the <code>install.php</code> file.</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h4>Step 2: Open the Installation Wizard</h4>
+                    <ol>
+                        <li>Open your web browser.</li>
+                        <li>Go to the following URL:
+                            <div style="margin: 15px 0; padding: 15px; background: #f8f9fa; border-radius: 6px;">
+                                <code>https://jpos2x.jaan.lk</code><br>
+                                
+                            </div>
+                        </li>
+                        <li>The <strong>JPOS System Installation Wizard</strong> will appear.</li>
+                    </ol>
+                </div>
+
+                <div class="step">
+                    <h4>Step 3: System Requirements Check</h4>
+                    <p>The system will automatically check:</p>
+                    <ul>
+                        <li>PHP version (8.2 or higher)</li>
+                        <li>Required PHP extensions</li>
+                        <li>Node.js (optional)</li>
+                    </ul>
+                    <p><strong>Next Steps:</strong></p>
+                    <ul>
+                        <li>If all requirements pass, click <strong>"Continue to Database Setup"</strong>.</li>
+                        <li>If any requirement fails, fix it before continuing.</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h4>Step 4: Database Configuration</h4>
+                    <p><strong>Enter Primary Database details:</strong></p>
+                    <ul>
+                        <li>Database Host (e.g., <code>localhost</code>)</li>
+                        <li>Database Name</li>
+                        <li>Database Username</li>
+                        <li>Database Password</li>
+                    </ul>
+
+                    <p><strong>(Optional) Enable Secondary Database:</strong></p>
+                    <ul>
+                        <li>Used for reports and analytics</li>
+                        <li>Fill in secondary database details if enabled</li>
+                    </ul>
+
+                    <p>Click <strong>"Start Installation"</strong>.</p>
+                </div>
+
+                <div class="step">
+                    <h4>Step 5: Installation Process</h4>
+                    <p>During installation, the system will automatically:</p>
+                    <ul>
+                        <li>Create the <code>.env</code> file</li>
+                        <li>Generate the application key</li>
+                        <li>Run database migrations</li>
+                        <li>Seed default users and data</li>
+                        <li>Create storage links</li>
+                        <li>Set file permissions</li>
+                        <li>Optimize the application</li>
+                        <li>Create an installation lock file</li>
+                    </ul>
+                    <p>A progress bar and log messages will be displayed.</p>
+                </div>
+
+                <div class="step">
+                    <h4>Step 6: Installation Complete</h4>
+                    <ul>
+                        <li>When installation is finished, a success message will appear.</li>
+                        <li>The system will automatically redirect to the <strong>Login Page</strong>.</li>
+                    </ul>
+
+                    <div class="note">
+                        <strong>For security reasons:</strong>
+                        <ul>
+                            <li>The installer file (<code>install.php</code>) is automatically deleted.</li>
+                            <li>Re-installation is blocked using a lock file.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tip">
+                    <strong>💡 Installation Tips:</strong>
+                    <ul>
+                        <li>Ensure your server meets all PHP requirements before starting</li>
+                        <li>Have your database credentials ready before beginning installation</li>
+                        <li>Make sure your web server has write permissions to the project directory</li>
+                        <li>If installation fails, check the error logs for detailed information</li>
+                    </ul>
+                </div>
             </section>
 
             <!-- Getting Started Section -->
