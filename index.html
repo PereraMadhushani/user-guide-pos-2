@@ -47,14 +47,14 @@
                             <li><a href="#suppliers"> Suppliers</a></li>
                         </ul>
                     </li>
-                    <li><a href="#purchasing">Purchasing & Stock</a>
+                    <li><a href="#purchasing">Stores</a>
                         <ul>
                             <li><a href="#purchase-orders">Purchase Orders</a></li>
                             <li><a href="#grn">Goods Received Notes</a></li>
                             <li><a href="#grn-returns">Goods Received Notes Return</a></li>
                             <li><a href="#expenses">Supplier Payment</a></li>
                             <li><a href="#product-transfer-request"> Product Transfer Request</a></li>
-                            <li><a href="#product-release-note"> Product Release Note  </a></li>
+                            <li><a href="#product-release-note"> Goods Transfer Release Notes  </a></li>
                             <li><a href="#stock-returns"> Stock Returns</a></li>
                         </ul>
                     </li>
@@ -213,7 +213,7 @@
                 <p>Manage all your products, categories, brands, and measurement units from the inventory section.</p>
 
                 <div id="products" class="subsection">
-                    <h3>Products Management</h3>
+                    <h3>Products</h3>
                     <p>The Products module allows you to add, edit, view, and manage all your inventory items.</p>
 
                     <div class="step">
@@ -321,11 +321,41 @@
                         <img src="screenshots/units.png" alt="Measurement Units" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: units.png<br><small>Place your units screenshot here</small></div>'">
                     </div>
                 </div>
+                <div id="suppliers" class="subsection">
+                    <h3>Suppliers</h3>
+                    <p></p>
+
+                    <div class="step">
+                        <h4>Managing Suppliers</h4>
+                        <ol>
+                            <li>Navigate to <strong>Products → Suppliers</strong></li>
+                            <li>Click <strong>"Create New Supplier"</strong> or <strong>"Add Supplier"</strong></li>
+                            <li>Fill in the expense details:
+                                <ul>
+                                    <li><strong>Supplier:</strong> Date when the expense occurred (required)</li>
+                                    <li><strong>Total Amount:</strong> Select expense category (e.g., Transportation, Utilities, Maintenance, Packaging, etc.)</li>
+                                    <li><strong>Paid:</strong> Brief description of the expense (required)</li>
+                                    <li><strong>Balance:</strong> Total expense amount (required)</li>
+                                    <li><strong>Amount:</strong> Total expense amount (required)</li>
+                                    <li><strong>Date:</strong> Total expense amount (required)</li>
+                                    <li><strong>Payment Method:</strong> Select how payment was made (Cash, Check, Bank Transfer, etc.)</li>
+                                </ul>
+                            </li>
+                            <li>Review all information for accuracy</li>
+                            <li>Click <strong>"Create Expense"</strong> to record the expense</li>
+                        </ol>
+
+                        <div class="screenshot-placeholder">
+                            <img src="screenshots/supplier.png" alt="Create Expense" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: expenses-create.png<br><small>Place your create expense screenshot here</small></div>'">
+                        </div>
+                    </div>
+                </div>
+
             </section>
 
             <!-- Purchasing & Stock-->
             <section id="purchasing" class="section">
-                <h2>Purchasing & Stock</h2>
+                <h2>Stores</h2>
 
                 <div id="purchase-orders" class="subsection">
                     <h3>Purchase Order Requests (POR)</h3>
@@ -569,36 +599,7 @@
                     </div>
                 </div>
 
-                 <div id="suppliers" class="subsection">
-                    <h3>Suppliers</h3>
-                    <p></p>
-
-                    <div class="step">
-                        <h4>Managing Suppliers</h4>
-                        <ol>
-                            <li>Navigate to <strong>Products → Suppliers</strong></li>
-                            <li>Click <strong>"Create New Supplier"</strong> or <strong>"Add Supplier"</strong></li>
-                            <li>Fill in the expense details:
-                                <ul>
-                                    <li><strong>Supplier:</strong> Date when the expense occurred (required)</li>
-                                    <li><strong>Total Amount:</strong> Select expense category (e.g., Transportation, Utilities, Maintenance, Packaging, etc.)</li>
-                                    <li><strong>Paid:</strong> Brief description of the expense (required)</li>
-                                    <li><strong>Balance:</strong> Total expense amount (required)</li>
-                                    <li><strong>Amount:</strong> Total expense amount (required)</li>
-                                    <li><strong>Date:</strong> Total expense amount (required)</li>
-                                    <li><strong>Payment Method:</strong> Select how payment was made (Cash, Check, Bank Transfer, etc.)</li>
-                                </ul>
-                            </li>
-                            <li>Review all information for accuracy</li>
-                            <li>Click <strong>"Create Expense"</strong> to record the expense</li>
-                        </ol>
-
-                        <div class="screenshot-placeholder">
-                            <img src="screenshots/supplier.png" alt="Create Expense" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: expenses-create.png<br><small>Place your create expense screenshot here</small></div>'">
-                        </div>
-                    </div>
-                </div>
-
+                 
                  <!-- <div id="product-transfer-request" class="subsection">
                     <h3>Product Transfer Request</h3>
                     <p></p>
@@ -630,13 +631,13 @@
                 </div> -->
 
                  <div id="product-release-note" class="subsection">
-                    <h3>Product Release Note</h3>
+                    <h3>Goods Transfer Release Notes</h3>
                     <p></p>
 
                     <div class="step">
                         <h4>Creating a Product Release Note</h4>
                         <ol>
-                            <li>Navigate to <strong>Purchasing & Stock → Product Release Note</strong></li>
+                            <li>Navigate to <strong>Stores → Product Release Note</strong></li>
                             <li>Click <strong>"Create New Release Note"</strong> or <strong>"Add Note"</strong></li>
                             <li>Fill in the expense details:
                                 <ul>
@@ -659,7 +660,7 @@
                     </div>
                 </div>
 
-                 <div id="stock-returns" class="subsection">
+                 <!-- <div id="stock-returns" class="subsection">
                     <h3>Stock Returns</h3>
                     <p></p>
 
@@ -688,7 +689,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
 
             <!-- Shops Section -->
@@ -713,7 +714,7 @@
                         </ul>
 
                         <div class="screenshot-placeholder">
-                            <img src="screenshots/customers-list.png" alt="Customer List" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: customers-list.png<br><small>Place your customer list screenshot here</small></div>'">
+                            <img src="screenshots/customerlist.png" alt="Customer List" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: customers-list.png<br><small>Place your customer list screenshot here</small></div>'">
                         </div>
                     </div>
 
@@ -743,7 +744,7 @@
                         </ol>
 
                         <div class="screenshot-placeholder">
-                            <img src="screenshots/add-customer.png" alt="Add New Customer" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: add-customer.png<br><small>Place your add customer modal screenshot here</small></div>'">
+                            <img src="screenshots/customer.png" alt="Add New Customer" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: add-customer.png<br><small>Place your add customer modal screenshot here</small></div>'">
                         </div>
                     </div>
 
@@ -785,7 +786,7 @@
                         </ul>
 
                         <div class="screenshot-placeholder">
-                            <img src="screenshots/discounts-list.png" alt="Discount List" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: discounts-list.png<br><small>Place your discount list screenshot here</small></div>'">
+                            <img src="screenshots/discountlist.png" alt="Discount List" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: discounts-list.png<br><small>Place your discount list screenshot here</small></div>'">
                         </div>
                     </div>
 
@@ -820,7 +821,7 @@
                         </ol>
 
                         <div class="screenshot-placeholder">
-                            <img src="screenshots/add-discount.png" alt="Add New Discount" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: add-discount.png<br><small>Place your add discount modal screenshot here</small></div>'">
+                            <img src="screenshots/discount.png" alt="Add New Discount" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: add-discount.png<br><small>Place your add discount modal screenshot here</small></div>'">
                         </div>
                     </div>
 
@@ -860,7 +861,7 @@
                         </ul>
 
                         <div class="screenshot-placeholder">
-                            <img src="screenshots/taxes-list.png" alt="Tax List" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: taxes-list.png<br><small>Place your tax list screenshot here</small></div>'">
+                            <img src="screenshots/taxlist.png" alt="Tax List" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: taxes-list.png<br><small>Place your tax list screenshot here</small></div>'">
                         </div>
                     </div>
 
@@ -893,7 +894,7 @@
                         </ol>
 
                         <div class="screenshot-placeholder">
-                            <img src="screenshots/add-tax.png" alt="Add New Tax" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: add-tax.png<br><small>Place your add tax modal screenshot here</small></div>'">
+                            <img src="screenshots/taxes.png" alt="Add New Tax" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: add-tax.png<br><small>Place your add tax modal screenshot here</small></div>'">
                         </div>
                     </div>
 
@@ -942,10 +943,10 @@
                             <li><strong>Bill Summary:</strong> Real-time calculation of totals, discounts, and change</li>
                         </ul>
 
-                        <div class="screenshot-placeholder">
-                            <img src="screenshots/new-sale-interface.png" alt="New Sale Interface" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: new-sale-interface.png<br><small>Place your new sale interface screenshot here</small></div>'">
+                        <!-- <div class="screenshot-placeholder">
+                            <img src="screenshots/salespage.png" alt="New Sale Interface" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: new-sale-interface.png<br><small>Place your new sale interface screenshot here</small></div>'">
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="step">
                         <h4>Creating a New Sale</h4>
@@ -1005,7 +1006,7 @@
                         </ol>
 
                         <div class="screenshot-placeholder">
-                            <img src="screenshots/pos-sales.png" alt="POS Sales Process" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: pos-sales.png<br><small>Place your POS sales screenshot here</small></div>'">
+                            <img src="screenshots/salespage.png" alt="POS Sales Process" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: pos-sales.png<br><small>Place your POS sales screenshot here</small></div>'">
                         </div>
                     </div>
 
@@ -1061,7 +1062,7 @@
                         </ul>
 
                         <div class="screenshot-placeholder">
-                            <img src="screenshots/sales-history-list.png" alt="Sales History List" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: sales-history-list.png<br><small>Place your sales history list screenshot here</small></div>'">
+                            <img src="screenshots/saleshistory.png" alt="Sales History List" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: sales-history-list.png<br><small>Place your sales history list screenshot here</small></div>'">
                         </div>
                     </div>
 
@@ -1154,10 +1155,10 @@
                             <li><strong>Bill Summary:</strong> Shows Discount, Subtotal, and Net Total calculations</li>
                         </ul>
 
-                        <div class="screenshot-placeholder">
+                        <!-- <div class="screenshot-placeholder">
                             <img src="screenshots/new-quotation-interface.png" alt="New Quotation Interface" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: new-quotation-interface.png<br><small>Place your new quotation interface screenshot here</small></div>'">
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="step">
                         <h4>Creating a New Quotation</h4>
@@ -1209,7 +1210,7 @@
                         </ol>
 
                         <div class="screenshot-placeholder">
-                            <img src="screenshots/quotations.png" alt="Creating Quotation" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: quotations.png<br><small>Place your quotations screenshot here</small></div>'">
+                            <img src="screenshots/quotation.png" alt="Creating Quotation" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: quotations.png<br><small>Place your quotations screenshot here</small></div>'">
                         </div>
                     </div>
 
@@ -1258,7 +1259,7 @@
                         </ul>
 
                         <div class="screenshot-placeholder">
-                            <img src="screenshots/edit-quotation-interface.png" alt="Edit Quotation Interface" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: edit-quotation-interface.png<br><small>Place your edit quotation interface screenshot here</small></div>'">
+                            <img src="screenshots/editquo.png" alt="Edit Quotation Interface" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: edit-quotation-interface.png<br><small>Place your edit quotation interface screenshot here</small></div>'">
                         </div>
                     </div>
 
@@ -1404,7 +1405,7 @@
                         </ul>
 
                         <div class="screenshot-placeholder">
-                            <img src="screenshots/transfer-requests-list.png" alt="Product Transfer Requests List" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: transfer-requests-list.png<br><small>Place your transfer requests list screenshot here</small></div>'">
+                            <img src="screenshots/ptr.png" alt="Product Transfer Requests List" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: transfer-requests-list.png<br><small>Place your transfer requests list screenshot here</small></div>'">
                         </div>
                     </div>
 
@@ -1446,7 +1447,7 @@
                         </ol>
 
                         <div class="screenshot-placeholder">
-                            <img src="screenshots/create-transfer-request.png" alt="Create Product Transfer Request" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: create-transfer-request.png<br><small>Place your create transfer request screenshot here</small></div>'">
+                            <img src="screenshots/ptrc.png" alt="Create Product Transfer Request" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: create-transfer-request.png<br><small>Place your create transfer request screenshot here</small></div>'">
                         </div>
                     </div>
 
@@ -1515,7 +1516,7 @@
                         </ul>
 
                         <div class="screenshot-placeholder">
-                            <img src="screenshots/stock-transfer-returns-list.png" alt="Stock Transfer Returns List" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: stock-transfer-returns-list.png<br><small>Place your stock transfer returns list screenshot here</small></div>'">
+                            <img src="screenshots/gtr.png" alt="Stock Transfer Returns List" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: stock-transfer-returns-list.png<br><small>Place your stock transfer returns list screenshot here</small></div>'">
                         </div>
                     </div>
 
@@ -1558,7 +1559,7 @@
                         </ol>
 
                         <div class="screenshot-placeholder">
-                            <img src="screenshots/create-stock-transfer-return.png" alt="Create Stock Transfer Return" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: create-stock-transfer-return.png<br><small>Place your create stock transfer return screenshot here</small></div>'">
+                            <img src="screenshots/creategtr.png" alt="Create Stock Transfer Return" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: create-stock-transfer-return.png<br><small>Place your create stock transfer return screenshot here</small></div>'">
                         </div>
                     </div>
 
@@ -1654,7 +1655,7 @@
                         </ul>
 
                         <div class="screenshot-placeholder">
-                            <img src="screenshots/sales-return-list.png" alt="Sales Return List" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: sales-return-list.png<br><small>Place your sales return list screenshot here</small></div>'">
+                            <img src="screenshots/salesreturn.png" alt="Sales Return List" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: sales-return-list.png<br><small>Place your sales return list screenshot here</small></div>'">
                         </div>
                     </div>
 
@@ -1714,7 +1715,7 @@
                         </ul>
 
                         <div class="screenshot-placeholder">
-                            <img src="screenshots/create-sales-return.png" alt="Create Sales Return" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: create-sales-return.png<br><small>Place your create sales return screenshot here</small></div>'">
+                            <img src="screenshots/createsalesreturn.png" alt="Create Sales Return" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: create-sales-return.png<br><small>Place your create sales return screenshot here</small></div>'">
                         </div>
                     </div>
 
@@ -1841,7 +1842,7 @@
 
            
 
-            <!-- Stock Transfers Section -->
+            <!-- Stock Transfers Section
             <section id="transfers" class="section">
                 <h2>Stock Transfers</h2>
                 <p>Transfer stock between different locations or warehouses.</p>
@@ -1875,7 +1876,7 @@
                         <img src="screenshots/prn.png" alt="Product Release Note" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📸 Screenshot: prn.png<br><small>Place your PRN screenshot here</small></div>'">
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!-- Reports Section -->
             <section id="reports" class="section">
